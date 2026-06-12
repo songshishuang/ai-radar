@@ -5,13 +5,14 @@ import ScoreBadge from "@/components/ScoreBadge";
 import type { HeadlineAnalysis } from "@/lib/types";
 
 const SECTIONS: { key: keyof HeadlineAnalysis; label: string }[] = [
+  { key: "background", label: "事件背景" },
   { key: "industry_impact", label: "行业影响" },
   { key: "competitive", label: "竞争格局" },
   { key: "rd_efficiency", label: "研发提效" },
   { key: "biz_opportunity", label: "商业机会" },
 ];
 
-/** 今日必读卡：默认 headline + background 摘要，点击展开五段全文 */
+/** 今日必读卡：默认 headline + ⚡so-what 一句话结论，点击展开六段全文 */
 export default function HeadlineCard({ item }: { item: HeadlineAnalysis }) {
   const [open, setOpen] = useState(false);
   const actionItems = Array.isArray(item.action_items)
@@ -42,13 +43,10 @@ export default function HeadlineCard({ item }: { item: HeadlineAnalysis }) {
             </span>
           </div>
         </div>
-        {item.background ? (
-          <p
-            className={`mt-2 text-sm leading-relaxed text-zinc-400 ${
-              open ? "" : "line-clamp-2"
-            }`}
-          >
-            {item.background}
+        {item.so_what || item.background ? (
+          <p className="mt-2 text-sm leading-relaxed text-cyan-200/90">
+            <span aria-hidden className="mr-1">⚡</span>
+            {item.so_what ?? item.background?.split("。")[0] + "。"}
           </p>
         ) : null}
       </button>

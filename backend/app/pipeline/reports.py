@@ -115,7 +115,17 @@ def _render_item_line(item: Item, enr: Enrichment) -> str:
     return f"- {score_mark} **[{item.title}]({item.url})** ({enr.importance_score}/10)\n  {enr.summary_zh} {tag_str}"
 
 
-def _render_headline(a: dict) -> str:
+def _render_headline_brief(a: dict, idx: int) -> str:
+    """正文必读区：3 行极简（标题 / so-what 结论 / 首条行动）。"""
+    so_what = a.get("so_what") or (a.get("background", "").split("。")[0] + "。")
+    first_action = (a.get("action_items") or [""])[0]
+    action_line = f"\n👉 {first_action}" if first_action else ""
+    return f"""**{idx}. [{a['headline']}]({a['url']})** `{a['importance']}/10` · {a['source']}
+⚡ {so_what}{action_line}"""
+
+
+def _render_headline_full(a: dict) -> str:
+    """附录区：六段全文。"""
     actions = "\n".join(f"  - {x}" for x in a.get("action_items", []))
     return f"""### {a['headline']}
 
@@ -195,8 +205,8 @@ def _stats_for(scored: list, session: Session) -> dict:
 
 
 def _render_brief_line(item: Item, enr: Enrichment, source_name: str) -> str:
-    """值得关注区：一行一条。"""
-    return f"- **[{item.title}]({item.url})** `{enr.importance_score}` · {CATEGORY_LABELS.get(enr.category, enr.category)} · {source_name}\n  {enr.summary_zh}"
+    """值得关注区：仅一行（标题+分数+分类+来源），摘要不进正文（网页 feed 可看）。"""
+    return f"- **[{item.title}]({item.url})** `{enr.importance_score}` · {CATEGORY_LABELS.get(enr.category, enr.category)} · {source_name}"
 
 
 def build_daily(session: Session, date_str: str | None = None, provider: LLMProvider | None = None, now: datetime | None = None) -> Report:
@@ -215,7 +225,7 @@ def build_daily(session: Session, date_str: str | None = None, provider: LLMProv
     stats = _stats_for(scored, session)
 
     headline_ids = {a["item_id"] for a in headlines}
-    notable = [(i, e, s) for i, e, s in scored if e.importance_score in (6, 7) and i.id not in headline_ids][:12]
+    notable = [(i, e, s) for i, e, s in scored if e.importance_score in (6, 7) and i.id not in headline_ids][:8]
     shown = len(headlines) + len(notable)
     rest = max(0, stats["total"] - shown)
 
@@ -226,18 +236,18 @@ def build_daily(session: Session, date_str: str | None = None, provider: LLMProv
             tldr = provider.complete(TLDR_PROMPT.format(digest=digest), tier="fast").strip()
             # claude-cli 子进程可能受用户全局 CLAUDE.md 影响输出称呼/引言行，剥离之
             tldr = re.sub(r"^My Lord[，,：:]?\s*", "", tldr)
-            tldr = re.sub(r"^[^。\n]{0,20}如下[：:]\s*\n*", "", tldr).strip()[:300]
+            tldr = re.sub(r"^[^。\n]{0,24}(如下|以下是[^。\n]{0,12})[：:]\s*\n*", "", tldr).strip()[:300]
         except Exception:
             tldr = ""
     stats["tldr"] = tldr
 
     title = f"AI 情报日报 · {date_str}"
-    parts = [f"# {title}\n"]
+    parts = [f"# {title}\n\n_☕ 正文 2 分钟读完 · 深度解读见文末附录_"]
     if tldr:
         parts.append(f"## ⚡ 今日速览\n\n{tldr}")
     if headlines:
-        parts.append("## 🔥 今日必读\n")
-        parts.extend(_render_headline(a) for a in headlines)
+        brief = "\n\n".join(_render_headline_brief(a, idx) for idx, a in enumerate(headlines, 1))
+        parts.append(f"## 🔥 今日必读\n\n{brief}")
     elif scored:
         parts.append("## 🔥 今日高分条目\n\n" + "\n".join(_render_item_line(i, e) for i, e, _ in scored[:5]))
     if notable:
@@ -246,11 +256,13 @@ def build_daily(session: Session, date_str: str | None = None, provider: LLMProv
         parts.append("_本期暂无新条目_")
     footer_bits = [f"本期共收录 **{stats['total']}** 条"]
     if rest:
-        footer_bits.append(f"其余 {rest} 条低分条目见[网站信息流]({settings.site_base_url}/feed)")
+        footer_bits.append(f"其余 {rest} 条见[网站信息流]({settings.site_base_url}/feed)")
     degraded = stats.get("degraded_sources", [])
     if degraded:
-        footer_bits.append(f"降级源：{'、'.join(degraded[:6])}")
+        footer_bits.append(f"降级源 {len(degraded)} 个")
     parts.append("---\n\n_" + " · ".join(footer_bits) + "_")
+    if headlines:  # 深度全文沉底，想深入再往下滚
+        parts.append("## 📚 附录 · 深度解读\n\n" + "\n\n".join(_render_headline_full(a) for a in headlines))
     markdown_text = "\n\n".join(parts)
 
     report = _persist(session, "daily", date_str, title, markdown_text, headlines, stats)

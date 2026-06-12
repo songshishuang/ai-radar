@@ -24,6 +24,8 @@ export interface ReportDetail extends ReportSummary {
 /** headline_analysis JSON 数组单条（今日必读） */
 export interface HeadlineAnalysis {
   headline: string;
+  /** 一句话结论（V3 起；旧报告无此字段，渲染需兜底 background 首句） */
+  so_what?: string;
   background: string;
   industry_impact: string;
   competitive: string;

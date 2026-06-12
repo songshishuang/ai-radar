@@ -8,6 +8,7 @@ from app.pipeline.reports import build_daily, build_weekly
 DEEP_RESPONSE = json.dumps(
     {
         "headline": "重磅模型发布",
+        "so_what": "一句话结论：该模型改变竞争格局",
         "background": "背景",
         "industry_impact": "影响",
         "competitive": "竞品",
@@ -66,7 +67,9 @@ def test_build_daily_pyramid_structure(db_session, tmp_path, monkeypatch):
     assert report.type == "daily" and report.period_date == "2026-06-12"
     assert "⚡ 今日速览" in report.markdown
     assert "🔥 今日必读" in report.markdown
-    assert "重磅模型发布" in report.markdown
+    assert "一句话结论：该模型改变竞争格局" in report.markdown  # 正文 so-what
+    assert "📚 附录 · 深度解读" in report.markdown  # 全文沉底
+    assert report.markdown.index("一句话结论") < report.markdown.index("📚 附录")  # 结论先于全文
     assert "本期共收录 **5**" in report.markdown
     assert "<h1" in report.html
     stats = json.loads(report.stats)
