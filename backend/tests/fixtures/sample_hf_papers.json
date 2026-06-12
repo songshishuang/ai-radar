@@ -1,0 +1,22 @@
+[
+  {
+    "publishedAt": "2026-06-12T04:00:00.000Z",
+    "paper": {
+      "id": "2606.01234",
+      "title": "Scaling Agentic Reasoning with Process Rewards",
+      "summary": "We propose a process-reward framework for multi-step agent reasoning...",
+      "upvotes": 45,
+      "publishedAt": "2026-06-11T18:00:00.000Z"
+    }
+  },
+  {
+    "publishedAt": "2026-06-12T04:00:00.000Z",
+    "paper": {
+      "id": "2606.05678",
+      "title": "Efficient Long-Context Attention via Sparse Routing",
+      "summary": "A sparse routing attention that cuts KV-cache memory by 60%...",
+      "upvotes": 30,
+      "publishedAt": "2026-06-11T20:00:00.000Z"
+    }
+  }
+]

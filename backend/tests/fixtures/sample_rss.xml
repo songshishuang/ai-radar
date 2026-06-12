@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Example AI Blog</title>
+    <link>https://example.com</link>
+    <item>
+      <title>Introducing SuperModel 3.0</title>
+      <link>https://example.com/supermodel-3?utm_source=rss</link>
+      <author>alice</author>
+      <pubDate>Fri, 12 Jun 2026 08:00:00 GMT</pubDate>
+      <description><![CDATA[<p>We are releasing <b>SuperModel 3.0</b> with 2x reasoning performance.</p>]]></description>
+    </item>
+    <item>
+      <title>Agentic coding best practices</title>
+      <link>https://example.com/agentic-coding</link>
+      <pubDate>Thu, 11 Jun 2026 15:30:00 GMT</pubDate>
+      <description>How teams ship faster with AI agents.</description>
+    </item>
+  </channel>
+</rss>

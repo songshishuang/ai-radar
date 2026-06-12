@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+sqlalchemy>=2.0
+feedparser
+httpx
+apscheduler
+jinja2
+pydantic-settings
+anthropic
+pytest
+pytest-asyncio
+beautifulsoup4
+markdown

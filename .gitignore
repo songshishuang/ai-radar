@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+.next/
+out/
+
+# Data
+data/*.db
+data/*.db-journal
+
+# Env
+.env
+.env.local
+
+# OS
+.DS_Store

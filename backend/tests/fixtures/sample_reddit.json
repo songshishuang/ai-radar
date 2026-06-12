@@ -1,0 +1,30 @@
+{
+  "data": {
+    "children": [
+      {
+        "data": {
+          "title": "New 7B model beats 70B on coding benchmarks",
+          "permalink": "/r/LocalLLaMA/comments/abc123/new_7b_model/",
+          "author": "ml_fan",
+          "score": 980,
+          "created_utc": 1781222400,
+          "selftext": "Benchmarks attached. Quantized GGUF available.",
+          "url": "https://huggingface.co/example/model-7b",
+          "subreddit": "LocalLLaMA"
+        }
+      },
+      {
+        "data": {
+          "title": "Low score post",
+          "permalink": "/r/LocalLLaMA/comments/low/low_post/",
+          "author": "x",
+          "score": 10,
+          "created_utc": 1781222401,
+          "selftext": "",
+          "url": "",
+          "subreddit": "LocalLLaMA"
+        }
+      }
+    ]
+  }
+}

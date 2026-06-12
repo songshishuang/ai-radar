@@ -1,0 +1,34 @@
+{
+  "hits": [
+    {
+      "objectID": "40000001",
+      "title": "Show HN: Open-source LLM eval harness",
+      "url": "https://github.com/example/eval-harness",
+      "author": "pg",
+      "points": 256,
+      "num_comments": 88,
+      "created_at_i": 1781222400,
+      "story_text": null
+    },
+    {
+      "objectID": "40000002",
+      "title": "Claude ships new agent SDK",
+      "url": "https://anthropic.com/news/agent-sdk",
+      "author": "dang",
+      "points": 412,
+      "num_comments": 200,
+      "created_at_i": 1781230000,
+      "story_text": null
+    },
+    {
+      "objectID": "40000003",
+      "title": "Low score story should be filtered",
+      "url": "https://example.com/low",
+      "author": "x",
+      "points": 50,
+      "num_comments": 3,
+      "created_at_i": 1781230001,
+      "story_text": null
+    }
+  ]
+}
