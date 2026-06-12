@@ -60,19 +60,35 @@ def enrich_batch(session: Session, provider: LLMProvider, items: list[Item], sou
     return created
 
 
-def run_enrich(session: Session, batch_size: int = 12, provider: LLMProvider | None = None) -> dict:
+def run_enrich(
+    session: Session, batch_size: int = 12, provider: LLMProvider | None = None, max_age_days: int = 7
+) -> dict:
+    """只处理时间窗口内（published_at 或 created_at 距今 ≤ max_age_days）的未加工条目，
+    避免首抓时 RSS 历史存量挤爆 LLM 配额。"""
+    from datetime import timedelta
+
     provider = provider or get_provider()
     run = PipelineRun(stage="enrich")
     session.add(run)
     session.commit()
 
-    pending = (
+    candidates = (
         session.execute(
             select(Item).outerjoin(Enrichment, Enrichment.item_id == Item.id).where(Enrichment.id.is_(None)).order_by(Item.id)
         )
         .scalars()
         .all()
     )
+    cutoff = utcnow() - timedelta(days=max_age_days)
+    pending = []
+    for item in candidates:
+        t = item.published_at or item.created_at
+        if t is not None and t.tzinfo is None:
+            from datetime import timezone as _tz
+
+            t = t.replace(tzinfo=_tz.utc)
+        if t is None or t >= cutoff:
+            pending.append(item)
     source_names = {s.id: s.name for s in session.execute(select(Source)).scalars().all()}
 
     enriched = 0

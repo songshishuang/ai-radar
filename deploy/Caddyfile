@@ -1,0 +1,12 @@
+# 把 :80 换成你的域名（如 intel.example.com）即自动 HTTPS
+:80 {
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+	handle /rss/* {
+		reverse_proxy api:8000
+	}
+	handle {
+		reverse_proxy web:3000
+	}
+}
