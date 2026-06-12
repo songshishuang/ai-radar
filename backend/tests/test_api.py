@@ -38,7 +38,7 @@ def _seed_item(db_session):
     it = Item(source_id=s.id, title="Hello AI", url="https://x.com/hello", content_hash="apih1", published_at=datetime.now(timezone.utc))
     db_session.add(it)
     db_session.flush()
-    db_session.add(Enrichment(item_id=it.id, summary_zh="你好摘要", category="tech", tags='["LLM"]', importance_score=8))
+    db_session.add(Enrichment(item_id=it.id, summary_zh="你好摘要", category="model-release", tags='["LLM"]', entities='["OpenAI"]', importance_score=8))
     db_session.commit()
 
 
@@ -54,8 +54,8 @@ def test_reports_list_and_detail(client, db_session):
 def test_items_filters(client, db_session):
     _seed_item(db_session)
     assert len(client.get("/api/items").json()) == 1
-    assert len(client.get("/api/items?category=tech&min_score=7").json()) == 1
-    assert len(client.get("/api/items?category=product").json()) == 0
+    assert len(client.get("/api/items?category=model-release&min_score=7").json()) == 1
+    assert len(client.get("/api/items?category=business").json()) == 0
     assert len(client.get("/api/items?q=你好").json()) == 1
     assert client.get("/api/items?q=不存在的词").json() == []
 

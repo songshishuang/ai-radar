@@ -28,34 +28,40 @@ export default async function ReportDetailPage({
 
   return (
     <div>
-      <nav className="mb-4 text-sm text-gray-500" aria-label="面包屑">
-        <Link href="/" className="hover:text-blue-600">
+      <nav className="mb-5 text-sm text-zinc-500" aria-label="面包屑">
+        <Link href="/" className="transition-colors hover:text-cyan-400">
           首页
         </Link>
-        <span className="mx-1.5 text-gray-300">/</span>
+        <span className="mx-1.5 text-zinc-700">/</span>
         <Link
           href={`/reports?type=${encodeURIComponent(type)}`}
-          className="hover:text-blue-600"
+          className="transition-colors hover:text-cyan-400"
         >
           {typeLabel}归档
         </Link>
-        <span className="mx-1.5 text-gray-300">/</span>
-        <span className="text-gray-700">{date}</span>
+        <span className="mx-1.5 text-zinc-700">/</span>
+        <span className="tabular-nums text-zinc-300">{date}</span>
       </nav>
 
       {report ? (
         <>
-          <header className="mb-6 border-b border-gray-200 pb-4">
-            <h1 className="text-2xl font-bold tracking-tight">
+          <header className="mb-8 border-b border-white/[0.06] pb-6">
+            <h1 className="text-gradient inline-block text-3xl font-bold tracking-tight">
               {report.title}
             </h1>
-            <p className="mt-2 text-xs text-gray-400">
-              {typeLabel} · {report.period_date} · 生成于{" "}
-              {formatDateTime(report.created_at)}
+            <p className="mt-3 flex flex-wrap items-center gap-2 text-xs text-zinc-500">
+              <span className="rounded-full border border-white/10 px-2 py-0.5">
+                {typeLabel}
+              </span>
+              <span className="tabular-nums">{report.period_date}</span>
+              <span className="text-zinc-700">·</span>
+              <span className="tabular-nums">
+                生成于 {formatDateTime(report.created_at)}
+              </span>
             </p>
           </header>
           <article
-            className="prose prose-slate max-w-none"
+            className="prose prose-invert max-w-none prose-headings:tracking-tight prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-violet-500/60 prose-blockquote:text-zinc-400 prose-strong:text-zinc-100 prose-hr:border-white/[0.08]"
             dangerouslySetInnerHTML={{ __html: report.html }}
           />
         </>

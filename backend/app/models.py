@@ -46,8 +46,9 @@ class Enrichment(Base):
     id: Mapped[int] = mapped_column(primary_key=True)
     item_id: Mapped[int] = mapped_column(ForeignKey("items.id"), unique=True)
     summary_zh: Mapped[str] = mapped_column(Text)
-    category: Mapped[str]  # paradigm | tech | opensource | product
-    tags: Mapped[str] = mapped_column(default="[]")  # JSON list
+    category: Mapped[str]  # 8 类：model-release|dev-tooling|agent-infra|research|opensource|product-launch|business|policy-safety
+    tags: Mapped[str] = mapped_column(default="[]")  # JSON list 主题标签
+    entities: Mapped[str] = mapped_column(default="[]")  # JSON list 公司/产品/模型规范名
     importance_score: Mapped[int] = mapped_column(default=5)
     model: Mapped[str] = mapped_column(default="")
     tokens_in: Mapped[int] = mapped_column(default=0)

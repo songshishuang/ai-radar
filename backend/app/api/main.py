@@ -127,6 +127,7 @@ def list_items(
             "summary_zh": enr.summary_zh,
             "category": enr.category,
             "tags": json.loads(enr.tags or "[]"),
+            "entities": json.loads(enr.entities or "[]"),
             "importance_score": enr.importance_score,
         }
         for item, enr, source_name in rows

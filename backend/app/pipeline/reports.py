@@ -1,6 +1,7 @@
 """报告组装：日报/周报/月报 → Markdown + HTML 入库 + 落盘。"""
 
 import json
+import re
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -15,12 +16,29 @@ from app.models import Enrichment, Item, PipelineRun, Report, Source, utcnow
 from app.pipeline.analyze import deep_analyze
 
 CATEGORY_LABELS = {
-    "paradigm": "🛠 产研 AI 范式",
-    "tech": "🧠 AI 技术",
-    "opensource": "📦 开源项目",
-    "product": "🚀 行业 AI 产品",
+    "model-release": "🧠 模型发布",
+    "dev-tooling": "🛠 产研工具",
+    "agent-infra": "🔧 Agent 基建",
+    "research": "🔬 前沿研究",
+    "opensource": "📦 开源生态",
+    "product-launch": "🚀 产品动态",
+    "business": "💰 商业资本",
+    "policy-safety": "🛡 政策安全",
 }
-CATEGORY_ORDER = ["paradigm", "tech", "opensource", "product"]
+CATEGORY_ORDER = [
+    "model-release",
+    "dev-tooling",
+    "agent-infra",
+    "research",
+    "opensource",
+    "product-launch",
+    "business",
+    "policy-safety",
+]
+
+TLDR_PROMPT = """基于以下今日 AI 行业高分资讯摘要，写一段「今日速览」：恰好 3 句话，每句一个重点，合计不超过 120 字。直接输出文本，不要 JSON、不要列表符号。
+
+{digest}"""
 REPORTS_DIR = BASE_DIR / "data" / "reports"
 
 WEEKLY_PROMPT = """你是 AI 行业分析师，为关注「产研提效」与「商业产品机会」的产品经理写本周趋势综述。
@@ -61,10 +79,12 @@ def scored_join(session: Session, since: datetime | None = None, until: datetime
     return out
 
 
-def items_for_daily(session: Session, now: datetime) -> list:
-    last = session.execute(
-        select(Report).where(Report.type == "daily").order_by(Report.created_at.desc()).limit(1)
-    ).scalar_one_or_none()
+def items_for_daily(session: Session, now: datetime, period_date: str | None = None) -> list:
+    """窗口=自上一份『更早 period』日报的生成时刻起；重建当日报告时排除自身，否则窗口归零。"""
+    q = select(Report).where(Report.type == "daily")
+    if period_date:
+        q = q.where(Report.period_date < period_date)
+    last = session.execute(q.order_by(Report.period_date.desc()).limit(1)).scalar_one_or_none()
     since = last.created_at if last else now - timedelta(hours=36)
     if since.tzinfo is None:
         since = since.replace(tzinfo=timezone.utc)
@@ -174,7 +194,13 @@ def _stats_for(scored: list, session: Session) -> dict:
     return {"total": len(scored), "by_category": by_cat, "degraded_sources": _degraded_sources(session)}
 
 
+def _render_brief_line(item: Item, enr: Enrichment, source_name: str) -> str:
+    """值得关注区：一行一条。"""
+    return f"- **[{item.title}]({item.url})** `{enr.importance_score}` · {CATEGORY_LABELS.get(enr.category, enr.category)} · {source_name}\n  {enr.summary_zh}"
+
+
 def build_daily(session: Session, date_str: str | None = None, provider: LLMProvider | None = None, now: datetime | None = None) -> Report:
+    """金字塔结构：⚡速览(3句) → 🔥必读 Top3-5(深度研报,≥8分) → 📌值得关注(6-7分,≤12条一行式) → 尾注收录。"""
     provider = provider or get_provider()
     now = now or utcnow()
     date_str = date_str or now.astimezone(_tz()).strftime("%Y-%m-%d")
@@ -182,22 +208,49 @@ def build_daily(session: Session, date_str: str | None = None, provider: LLMProv
     session.add(run)
     session.commit()
 
-    scored = items_for_daily(session, now)
-    headlines = deep_analyze(session, provider, scored, top_n=5, min_score=7)
+    scored = items_for_daily(session, now, period_date=date_str)
+    headlines = deep_analyze(session, provider, scored, top_n=5, min_score=8)
+    if not headlines:  # ≥8 无果时放宽到 ≥7，保证必读区不空
+        headlines = deep_analyze(session, provider, scored, top_n=3, min_score=7)
     stats = _stats_for(scored, session)
+
+    headline_ids = {a["item_id"] for a in headlines}
+    notable = [(i, e, s) for i, e, s in scored if e.importance_score in (6, 7) and i.id not in headline_ids][:12]
+    shown = len(headlines) + len(notable)
+    rest = max(0, stats["total"] - shown)
+
+    tldr = ""
+    if scored:
+        digest = "\n".join(f"- {e.summary_zh}" for _, e, _ in scored[:15])
+        try:
+            tldr = provider.complete(TLDR_PROMPT.format(digest=digest), tier="fast").strip()
+            # claude-cli 子进程可能受用户全局 CLAUDE.md 影响输出称呼/引言行，剥离之
+            tldr = re.sub(r"^My Lord[，,：:]?\s*", "", tldr)
+            tldr = re.sub(r"^[^。\n]{0,20}如下[：:]\s*\n*", "", tldr).strip()[:300]
+        except Exception:
+            tldr = ""
+    stats["tldr"] = tldr
 
     title = f"AI 情报日报 · {date_str}"
     parts = [f"# {title}\n"]
+    if tldr:
+        parts.append(f"## ⚡ 今日速览\n\n{tldr}")
     if headlines:
-        parts.append("## 🔥 今日头条\n")
+        parts.append("## 🔥 今日必读\n")
         parts.extend(_render_headline(a) for a in headlines)
     elif scored:
-        top = scored[:5]
-        parts.append("## 🔥 今日高分条目\n")
-        parts.extend(_render_item_line(i, e) for i, e, _ in top)
-    categories_md = _render_categories(scored)
-    parts.append(f"## 📋 分类速览\n\n{categories_md}" if categories_md else "_本期暂无新条目_")
-    parts.append(_render_status(stats))
+        parts.append("## 🔥 今日高分条目\n\n" + "\n".join(_render_item_line(i, e) for i, e, _ in scored[:5]))
+    if notable:
+        parts.append("## 📌 值得关注\n\n" + "\n".join(_render_brief_line(i, e, s) for i, e, s in notable))
+    if not scored:
+        parts.append("_本期暂无新条目_")
+    footer_bits = [f"本期共收录 **{stats['total']}** 条"]
+    if rest:
+        footer_bits.append(f"其余 {rest} 条低分条目见[网站信息流]({settings.site_base_url}/feed)")
+    degraded = stats.get("degraded_sources", [])
+    if degraded:
+        footer_bits.append(f"降级源：{'、'.join(degraded[:6])}")
+    parts.append("---\n\n_" + " · ".join(footer_bits) + "_")
     markdown_text = "\n\n".join(parts)
 
     report = _persist(session, "daily", date_str, title, markdown_text, headlines, stats)
@@ -239,7 +292,8 @@ def build_weekly(session: Session, week_str: str | None = None, provider: LLMPro
             trends = {}
 
     big_events = [(i, e, s) for i, e, s in scored if e.importance_score >= 8]
-    top10 = scored[:10]
+    big_ids = {i.id for i, _, _ in big_events[:10]}
+    top10 = [(i, e, s) for i, e, s in scored if i.id not in big_ids][:10]
 
     title = f"AI 情报周报 · {week_str}（{week_range}）"
     parts = [f"# {title}\n"]
@@ -255,7 +309,7 @@ def build_weekly(session: Session, week_str: str | None = None, provider: LLMPro
         watch = "\n".join(f"- {w}" for w in trends["next_week_watch"])
         parts.append(f"## 🔭 下周关注\n\n{watch}")
     if top10:
-        parts.append("## 🏆 本周高分 Top 10\n\n" + "\n".join(_render_item_line(i, e) for i, e, _ in top10))
+        parts.append("## 🏆 本周其他高分条目\n\n" + "\n".join(_render_item_line(i, e) for i, e, _ in top10))
     parts.append(_render_status(stats))
     markdown_text = "\n\n".join(parts)
 

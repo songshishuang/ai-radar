@@ -3,79 +3,67 @@
 
 ## 🗞 本周大事记
 
-本周行业呈现三条并行主线：一是模型能力代际跃迁，Anthropic 发布 Mythos 级 Claude Fable 5，可独立运行多天工作流并可靠并行派发 sub-agents，标志通用模型进入真正的 agentic 时代；二是资本市场超级周期启动，OpenAI 向 SEC 机密提交 S-1、Prometheus（Bezos）以 $41B 估值融资 $12B，MANGOS 新阵营集体冲刺 IPO，AI 产业融资格局进入历史性转折点；三是 Agent 基础设施范式统一，Vercel AI SDK 7 发布 HarnessAgent API，一套代码可切换 Claude Code/Codex/Pi 等多个 harness，Agent 平台锁定风险首次被工程层面系统性消解，Okara AI CMO 日均 40 亿 token 的规模化运营同步验证多 agent 商业成熟度。
+本周最大事件是 Anthropic 发布 Claude Fable 5（Mythos 级），首个向开发者公测的 Mythos 级模型宣告 AI 基础能力跨越新台阶，但随即遭遇实测能力不符宣传及安全限制过严的双重质疑。资本层面，SpaceX 完成历史最大规模 IPO、马斯克成首位万亿富豪，OpenAI 秘密递交 S-1，Prometheus（「人工通用工程师」）完成 120 亿美元融资，AI 科技股 MANGOS 集团雏形已现，资本市场以前所未有的速度定价 AI 主权。与此同时，OpenAI 大幅降价应对竞争的信号释放，而 Vercel 月报揭示 API 消费支出增速（+43%）远超 token 流量增速（+20%），前端价格战与后端使用价值的剪刀差正在重塑 AI 平台商业模型。
 
 ## 🔴 本周重大事件
 
-- 🔴 **[Program Claude Code, Codex, Pi and other agent harnesses with AI SDK](https://vercel.com/changelog/program-agent-harnesses-with-ai-sdk)** (10/10)
-  Vercel AI SDK 7 发布 HarnessAgent API，统一支持多个 agent harness（Claude Code/Codex/Pi）。一套代码可切换 harness，用户不受特定平台锁定。这是 agent 基础设施的关键范式变化，推动 agent 平台通用化。 `AI SDK` `Agent Harness` `平台无关`
-- 🔴 **[Jeff Bezos’s Prometheus raises $12B to build an ‘artificial general engineer’ for the physical world](https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world)** (10/10)
-  Bezos 旗下 Prometheus 融资 $12B 估值 $41B，目标构建物理世界 AGE，用于自动化工程与药物设计，范式级融资事件。 `融资` `AGE` `物理AI` `自动化`
-- 🔴 **[Confidential submission of draft S-1 to the SEC](https://openai.com/index/openai-submits-confidential-s-1)** (9/10)
-  OpenAI向美国证券交易委员会(SEC)机密提交S-1表（拟上市注册申请书），标志着全球最重要AI公司的IPO进程正式启动。此举将开启AI领域融资历史上最关键时刻，对产业融资生态、估值体系、治理模式有深远影响。虽然具体上市时间未定，但已成为AI产业的重要里程碑事件。 `融资` `IPO` `商业动态` `里程碑事件`
-- 🔴 **[Fluid, natural voice translation with Gemini 3.5 Live Translate](https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate)** (9/10)
-  Gemini 3.5 Live Translate 实现接近实时的自然语音翻译，支持 Google AI Studio、Google Translate 和 Google Meet，打破语言障碍。 `语音翻译` `实时通信` `多语言` `Gemini应用`
-- 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (9/10)
-  Anthropic发布Mythos级别的Claude Fable 5模型，能力全面超越此前所有公开版本，是Agent和复杂推理任务的重大突破。 `Fable 5` `超级模型` `Mythos级` `能力突破`
-- 🔴 **[How Okara runs CMO agents for 120,000 companies on Vercel](https://vercel.com/blog/how-okara-runs-cmo-agents-for-120000-companies-on-vercel)** (9/10)
-  Okara AI CMO 平台在 Vercel 上规模化运营：日均处理40亿token，为120,000+企业驱动营销。多个 sub-agent 协作处理SEO/社交/内容等，新模型发布当日可用。代表AI agent多工作流编排在商业中的成熟应用。 `AI CMO` `Sub-agents` `大规模应用`
-- 🔴 **[Claude Fable 5 now available on AI Gateway](https://vercel.com/changelog/claude-fable-5-now-available-on-ai-gateway)** (9/10)
-  Anthropic Claude Fable 5（Mythos级模型）上线 Vercel AI Gateway。在长期、模糊、多步任务上相比前代大幅提升，可独立运行多天工作流且可靠地并行派发sub-agents。代表通用模型在复杂工程任务上的能力跃进。 `Claude` `Fable 5` `新模型`
+- 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
+  Claude Code v2.1.170 发布 Claude Fable 5（Mythos 级别），是首个向开发者通用发布的 Mythos 级模型，能力超过历代通用版本。这是 Anthropic 模型体系的重大突破。 `模型发布` `推理突破`
 - 🔴 **[Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1)** (9/10)
-  DeepSeek-R1开源复现实现。重大技术突破，社区可复制优化先进推理能力，对AI研究与应用生态有深远影响。 `推理模型` `开源` `DeepSeek`
-- 🔴 **[Claude Fable 5: mid-tier results on coding tasks](https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype)** (9/10)
-  Claude Fable 5发布，在编码任务中等水平表现。Anthropic编码AI新产品，对开发者生产力工具和产研流程具有商业价值。 `编码模型` `AI助手` `LLM`
-- 🔴 **[addyosmani/agent-skills: Production-grade engineering skills for AI coding agents.](https://github.com/addyosmani/agent-skills)** (9/10)
-  Addy Osmani开源agent-skills，生产级AI编码代理工程技能库。AI代理范式的工程方法论突破，直接赋能产研工具工业化实践。 `AI代理` `工程方法论` `编码助手`
+  DeepSeek-R1 推理模型的开源复现项目公布，开发者可在本地部署和优化该推理模型架构。 `推理模型` `开源复现`
+- 🔴 **[OpenAI mulls slashing prices as it competes with Anthropic for users](https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html)** (9/10)
+  OpenAI 考虑大幅降价以应对 Anthropic 激烈竞争，显示 AI 产品市场价格战升级。 `价格竞争` `市场动态`
+- 🔴 **[SpaceX, Anthropic, and OpenAI’s hot IPO summer](https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer)** (9/10)
+  Anthropic、OpenAI、SpaceX 等科技公司筹备 IPO，形成 AI 时代新的科技股集团 MANGOS，成为资本市场热点和估值压力测试。 `IPO 融资` `商业估值` `资本市场`
+- 🔴 **[It’s hot IPO summer, and the MANGOS are ripe](https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe)** (9/10)
+  Anthropic、OpenAI、SpaceX 等科技公司筹备 IPO，形成 AI 时代新的科技股集团 MANGOS，成为资本市场热点和估值压力测试。 `IPO 融资` `商业估值` `资本市场`
+- 🔴 **[Jeff Bezos’s Prometheus raises $12B to build an ‘artificial general engineer’ for the physical world](https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world)** (9/10)
+  Jeff Bezos参与投资的Prometheus完成120亿美元融资，公司估值达410亿美元，致力于研发"人工通用工程师"自动化复杂的工程和药物设计任务，代表物理世界AI领域的重大融资事件和战略进展。 `融资` `通用工程AI` `物理世界自动化`
+- 🔴 **[Confidential submission of draft S-1 to the SEC](https://openai.com/index/openai-submits-confidential-s-1)** (8/10)
+  OpenAI 向美国 SEC 秘密提交 S-1 上市文件，但未确定具体上市时间表，标志公司上市进程正式启动，是行业重大商业事件。 `IPO` `融资`
+- 🔴 **[Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs](https://cursor.com/changelog/bugbot-updates-june-2026)** (8/10)
+  Cursor 的 Bugbot 性能大幅升级：平均审查时间从 5 分钟降至 90 秒（快 3 倍），运营成本降低 22%，bug 检测能力提升 10%，显著提升了代码审查工具的实用价值。 `代码审查` `AI辅助开发`
+- 🔴 **[How Okara runs CMO agents for 120,000 companies on Vercel](https://vercel.com/blog/how-okara-runs-cmo-agents-for-120000-companies-on-vercel)** (8/10)
+  Okara AI CMO 在 Vercel 日处理 40 亿 token，服务 12 万+ 企业，通过 8 个子 Agent 驱动多渠道营销自动化，验证 Agent 平台商业可行性。 `多Agent编排` `营销自动化` `规模应用`
+- 🔴 **[Claude Fable 5 now available on AI Gateway](https://vercel.com/changelog/claude-fable-5-now-available-on-ai-gateway)** (8/10)
+  Anthropic 发布 Claude Fable 5（Mythos 级别），在长时间运行、多步推理和并行 Agent 执行上显著升级，支持多日自主工作。 `推理模型` `多步任务` `Agent能力`
 
 ## 📈 四维趋势综述
 
-### 🛠 产研 AI 范式
+### 📦 开源生态
 
-Agent 基础设施进入标准化阶段：HarnessAgent API 打通多平台、Addy Osmani agent-skills 与 obra/superpowers 框架提供生产级工程方法论、PM Skills Marketplace 实现 100+ agent 技能开箱即用，产研团队可直接复用而非从零构建。AI 编码工具从「对话」升级为「可复用工作流」：Copilot CLI 支持自定义 agent、Cursor Bugbot 审查速度提升 3 倍且 bug 检出率 +10%，工程提效从辅助建议向流程编排演进。Easybilling 等 AI 原生计费系统出现，AI 产品商业化的最后一公里基础设施正在补齐。调查同时揭示员工每周仍需 6+ 小时审核 AI 输出，人机信任度与自动化深度仍是产品设计的核心矛盾。
-
-### 🧠 AI 技术
-
-模型能力出现多维度同期突破：Claude Fable 5（Mythos）在长期模糊多步任务上全面超越前代，DeepSeek-R1 开源复现使社区可独立复刻顶级推理能力，MiniMax 稀疏注意力机制将上下文扩展至百万 token 级，共同推动 agent 工作流从「短时会话」向「持久化任务」演进。多模态实时能力实现商用：Gemini 3.5 Live Translate 接近实时语音翻译已集成 Google Meet，HYDRA-X 统一图像与视频 tokenization，DiffusionGemma 文本生成速度提升 4 倍，降低多模态应用的推理成本门槛。推理加速基础设施持续优化：LMCache 高性能 KV 缓存层、VIA-SD 推测解码路由验证，整体指向降低大规模部署成本。
-
-### 📦 开源项目
-
-DeepSeek-R1 社区开源复现是本周最高影响力开源事件，打破顶级推理模型的商业壁垒，深远影响研究与应用生态。HuggingFace olmo-eval 评估工作台提供统一基准框架，加速模型迭代效率；Unsloth 发布 DiffusionGemma GGUF 量化版本，边缘部署门槛大幅降低。OpenEnv 开源社区联合支持其成为 Agent 强化学习标准框架，有望填补 RL 工具链空缺。Addy Osmani 的 agent-skills 和 obra/superpowers 虽非传统开源库，但以开放方式释放的工程方法论正形成新型「范式开源」生态，对产研团队的实际提效价值不低于代码库本身。
-
-### 🚀 行业 AI 产品
-
-MANGOS IPO 超级周期正式开启：OpenAI S-1 机密提交、SpaceX IPO 启动、Anthropic IPO 信号明确，AI 产业估值体系与治理模式将面临重构，对二级市场与企业采购决策均有系统性影响。企业级商业化加速落地：DXC-Anthropic 进入金融航空等高监管行业核心系统，BBVA 10 万员工部署 ChatGPT Enterprise，LSEG 赋能 4000 名员工商业决策，标志大模型从「试点工具」向「关键业务系统」跨越。竞争激化推动定价下行：OpenAI 考虑大幅降价对标 Anthropic，Vercel 数据显示 DeepSeek 在 token 量上逼近 Anthropic，模型服务白热化将惠及下游产品成本结构。物理 AI 迎来范式级融资：Prometheus $41B 估值聚焦自动化工程与药物设计，Theker $85M 研发通用可重配机器人，物理世界 AGE 赛道正式进入主流资本视野。
+DeepSeek-R1 推理架构完整开源复现，开发者可本地部署优化，进一步压缩闭源模型护城河；Kimi K2.7-Code 以 token 效率切入编码细分，DiffusionGemma-26B 以 Apache 2.0 协议开放多模态图文生成（20k+ downloads）。工程侧，addyosmani 开源生产级 AI 编码 Agent 技能库，obra 开源完整 Superpowers Agent 方法论，开源社区正在构建可复用、可验证的 Agent 工程基础设施，大幅降低企业自建 Agent 流水线的技术门槛与试错成本。
 
 ## 🔭 下周关注
 
-- Claude Fable 5 企业落地与竞品基准对比：能否在实际产研工作流中验证「多天自主运行」承诺，以及 Anthropic 如何回应模型透明度争议（隐形护栏道歉事件）将直接影响企业采购决策
-- OpenAI S-1 信息披露进展与 MANGOS IPO 窗口期：估值锚定与治理架构的公开细节将重塑全行业对 AI 公司价值的定价基准，同时关注 OpenAI 降价策略是否落地及其对 Anthropic/Gemini 的连锁反应
-- HarnessAgent API 生态集成速度：Vercel AI SDK 7 能否在一周内吸引主流 agent 框架接入，将决定「跨 harness 通用化」是否成为行业事实标准，进而影响产品团队的技术选型策略
+- Claude Fable 5 / Mythos 第三方权威基准测评结果：能力宣传与实测不符风险是否坐实、安全限制松紧调整方向，将直接影响企业 2H2026 模型选型决策
+- OpenAI 降价方案细节与时间表：价格战幅度是否触发 Anthropic 跟进，以及对 Vercel / AWS AI Gateway 消费结构和开发者迁移行为的传导效应
+- MANGOS 集团上市进程后续（OpenAI S-1 关键披露内容、SpaceX 锁定期安排）：一级市场估值锚点形成后对 AI 融资节奏的冲击，以及 Prometheus「人工通用工程师」赛道的跟进者动向
 
-## 🏆 本周高分 Top 10
+## 🏆 本周其他高分条目
 
-- 🔴 **[Program Claude Code, Codex, Pi and other agent harnesses with AI SDK](https://vercel.com/changelog/program-agent-harnesses-with-ai-sdk)** (10/10)
-  Vercel AI SDK 7 发布 HarnessAgent API，统一支持多个 agent harness（Claude Code/Codex/Pi）。一套代码可切换 harness，用户不受特定平台锁定。这是 agent 基础设施的关键范式变化，推动 agent 平台通用化。 `AI SDK` `Agent Harness` `平台无关`
-- 🔴 **[Jeff Bezos’s Prometheus raises $12B to build an ‘artificial general engineer’ for the physical world](https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world)** (10/10)
-  Bezos 旗下 Prometheus 融资 $12B 估值 $41B，目标构建物理世界 AGE，用于自动化工程与药物设计，范式级融资事件。 `融资` `AGE` `物理AI` `自动化`
-- 🔴 **[Confidential submission of draft S-1 to the SEC](https://openai.com/index/openai-submits-confidential-s-1)** (9/10)
-  OpenAI向美国证券交易委员会(SEC)机密提交S-1表（拟上市注册申请书），标志着全球最重要AI公司的IPO进程正式启动。此举将开启AI领域融资历史上最关键时刻，对产业融资生态、估值体系、治理模式有深远影响。虽然具体上市时间未定，但已成为AI产业的重要里程碑事件。 `融资` `IPO` `商业动态` `里程碑事件`
-- 🔴 **[Fluid, natural voice translation with Gemini 3.5 Live Translate](https://deepmind.google/blog/fluid-natural-voice-translation-with-gemini-35-live-translate)** (9/10)
-  Gemini 3.5 Live Translate 实现接近实时的自然语音翻译，支持 Google AI Studio、Google Translate 和 Google Meet，打破语言障碍。 `语音翻译` `实时通信` `多语言` `Gemini应用`
-- 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (9/10)
-  Anthropic发布Mythos级别的Claude Fable 5模型，能力全面超越此前所有公开版本，是Agent和复杂推理任务的重大突破。 `Fable 5` `超级模型` `Mythos级` `能力突破`
-- 🔴 **[How Okara runs CMO agents for 120,000 companies on Vercel](https://vercel.com/blog/how-okara-runs-cmo-agents-for-120000-companies-on-vercel)** (9/10)
-  Okara AI CMO 平台在 Vercel 上规模化运营：日均处理40亿token，为120,000+企业驱动营销。多个 sub-agent 协作处理SEO/社交/内容等，新模型发布当日可用。代表AI agent多工作流编排在商业中的成熟应用。 `AI CMO` `Sub-agents` `大规模应用`
-- 🔴 **[Claude Fable 5 now available on AI Gateway](https://vercel.com/changelog/claude-fable-5-now-available-on-ai-gateway)** (9/10)
-  Anthropic Claude Fable 5（Mythos级模型）上线 Vercel AI Gateway。在长期、模糊、多步任务上相比前代大幅提升，可独立运行多天工作流且可靠地并行派发sub-agents。代表通用模型在复杂工程任务上的能力跃进。 `Claude` `Fable 5` `新模型`
-- 🔴 **[Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1)** (9/10)
-  DeepSeek-R1开源复现实现。重大技术突破，社区可复制优化先进推理能力，对AI研究与应用生态有深远影响。 `推理模型` `开源` `DeepSeek`
-- 🔴 **[Claude Fable 5: mid-tier results on coding tasks](https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype)** (9/10)
-  Claude Fable 5发布，在编码任务中等水平表现。Anthropic编码AI新产品，对开发者生产力工具和产研流程具有商业价值。 `编码模型` `AI助手` `LLM`
-- 🔴 **[addyosmani/agent-skills: Production-grade engineering skills for AI coding agents.](https://github.com/addyosmani/agent-skills)** (9/10)
-  Addy Osmani开源agent-skills，生产级AI编码代理工程技能库。AI代理范式的工程方法论突破，直接赋能产研工具工业化实践。 `AI代理` `工程方法论` `编码助手`
+- 🔴 **[DeepSeek enters the fight for token volume, Anthropic continues to dominate spend](https://vercel.com/blog/ai-gateway-production-index-june-2026)** (8/10)
+  Vercel AI Gateway 最新数据显示，2026年5月全球 AI token 流量环比增长 20%，而 API 调用消费金额增长 43%，超越流量增速。数据反映 DeepSeek、Claude 等模型在生产应用中的竞争，Anthropic 继续在消费支出上领先。该月报告基于数十万亿 token 的真实生产数据。 `市场份额` `Token消费` `商业数据`
+- 🔴 **[Anthropic apologizes for invisible Claude Fable guardrails](https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail)** (8/10)
+  Anthropic 为其 Claude Fable 模型中存在的隐形防护栏（invisible distillation guardrails）致歉，引发关于 AI 模型安全机制透明度的广泛讨论。该事件突出了模型对齐和用户知情权之间的张力，强调在 AI 安全设计中需要更高的透明度和可解释性。 `模型安全` `透明度` `对齐`
+- 🔴 **[Kimi K2.7-Code: open-source coding model with better token efficiency](https://huggingface.co/moonshotai/Kimi-K2.7-Code)** (8/10)
+  Kimi K2.7-Code 是开源编码模型，通过 token 效率优化实现更高计算性价比和产研提效。 `代码生成` `模型优化`
+- 🔴 **[MiniMax Sparse Attention](https://huggingface.co/papers/2606.13392)** (8/10)
+  MiniMax 稀疏注意力机制支持百万级 token 超长上下文处理，以块级稀疏结构解决传统注意力的二次方计算成本，赋能 Agent 和代码推理。 `长上下文` `稀疏注意力` `LLM 基础设施`
+- 🔴 **[SpaceX officially prices shares at $135 in the largest IPO ever](https://techcrunch.com/2026/06/11/spacex-officially-prices-shares-at-135-in-the-largest-ipo-ever)** (8/10)
+  SpaceX正式宣布IPO定价为每股135美元，启动全球历史规模最大的IPO项目，标志着商业太空产业商业化进程的重要里程碑和创新融资模式的成功验证。 `IPO` `融资`
+- 🔴 **[Introducing Claude Corps](https://www.anthropic.com/news/claude-corps)** (8/10)
+  Anthropic 推出 Claude Corps，为企业提供专门化的 Claude 服务和支持。这是 Anthropic 针对企业市场的新产品线，强化商业化布局。 `企业服务` `Claude生态` `商业产品`
+- 🔴 **[Claude Fable 5 and Claude Mythos 5](https://www.anthropic.com/news/claude-fable-5-mythos-5)** (8/10)
+  Anthropic 发布 Claude Fable 5 和 Claude Mythos 5 两款新模型。代表 Claude 系列在能力和性能上的新进展，拓展模型家族版本覆盖。 `模型发布` `能力升级` `推理模型`
+- 🟠 **[OpenAI to acquire Ona](https://openai.com/index/openai-to-acquire-ona)** (7/10)
+  OpenAI 收购 Ona，用于扩展 Codex 能力，为企业 AI Agent 提供安全的持久化云环境，支持跨企业工作流的长期运行能力。 `并购` `Agent基础设施`
+- 🟠 **[BBVA puts AI at the core of banking with OpenAI](https://openai.com/index/bbva)** (7/10)
+  BBVA 将 ChatGPT Enterprise 规模化部署至 10 万员工，与 OpenAI 深化合作，推动全球银行业 AI 驱动转型，成为大规模企业应用标杆。 `金融应用` `企业规模部署`
+- 🟠 **[PRC-linked influence operations are targeting AI debates in the US](https://openai.com/index/prc-linked-influence-operations-ai-debates)** (7/10)
+  OpenAI 公布报告显示中国相关势力利用 AI 进行影响操作，针对美国 AI 政策辩论、数据中心话题与关税等敏感议题，引发地缘政治风险警示。 `AI安全` `地缘政治`
 
 ## 📊 管道状态
 
-- 本期收录 **169** 条（🛠 产研 AI 范式 48 条 · 🚀 行业 AI 产品 88 条 · 🧠 AI 技术 27 条 · 📦 开源项目 6 条）
+- 本期收录 **169** 条（🧠 模型发布 13 条 · 📦 开源生态 4 条 · 💰 商业资本 20 条 · 🛠 产研工具 31 条 · 🛡 政策安全 15 条 · 🔬 前沿研究 17 条 · 🚀 产品动态 57 条 · 🔧 Agent 基建 12 条）
 - 降级/不可用源：Meta AI Blog、Mistral News、r/LocalLLaMA、r/MachineLearning、Ben's Bites

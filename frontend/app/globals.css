@@ -2,7 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  color-scheme: dark;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  /* 玻璃拟态卡片：半透明深色底 + 模糊 + 1px 亮边 */
+  .glass-card {
+    @apply rounded-xl border border-edge bg-panel backdrop-blur-md;
+  }
+
+  /* 卡片 hover：边框变亮 + 上浮 2px */
+  .card-hover {
+    @apply transition duration-200 hover:-translate-y-0.5 hover:border-white/20;
+  }
+
+  /* 品牌渐变文字 */
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent;
+  }
+
+  /* 浅一档的渐变文字（深底上可读性更好） */
+  .text-gradient-soft {
+    @apply bg-gradient-to-r from-violet-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent;
+  }
+
+  /* 品牌渐变填充（按钮 / 激活 chip） */
+  .bg-accent-gradient {
+    @apply bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400;
+  }
+}
+
+/* ---- 重要内容卡片：左侧 2px 渐变竖条 ---- */
+.accent-left {
+  position: relative;
+}
+.accent-left::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #8b5cf6, #3b82f6, #22d3ee);
+}
+
+/* ---- 导航 / Tab：渐变下划线（hover 展开，激活常驻） ---- */
+.gradient-underline {
+  position: relative;
+}
+.gradient-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #8b5cf6, #3b82f6, #22d3ee);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+.gradient-underline:hover::after,
+.gradient-underline.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ---- 横向滚动条隐藏（分类 chip 滚动条） ---- */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- 订阅成功：打勾动画 ---- */
+@keyframes check-pop {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  70% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes check-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.check-circle {
+  animation: check-pop 0.4s cubic-bezier(0.22, 1.2, 0.36, 1) both;
+}
+.check-path {
+  stroke-dasharray: 48;
+  stroke-dashoffset: 48;
+  animation: check-draw 0.45s ease 0.25s forwards;
 }

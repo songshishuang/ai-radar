@@ -6,9 +6,12 @@ export default function EmptyState({
   hint?: string;
 }) {
   return (
-    <div className="rounded-lg border border-dashed border-gray-300 bg-white px-6 py-16 text-center">
-      <p className="text-base text-gray-500">{message}</p>
-      {hint ? <p className="mt-2 text-sm text-gray-400">{hint}</p> : null}
+    <div className="glass-card border-dashed px-6 py-16 text-center">
+      <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-violet-500/20 via-blue-500/20 to-cyan-400/20 text-lg">
+        ∅
+      </div>
+      <p className="text-base text-zinc-400">{message}</p>
+      {hint ? <p className="mt-2 text-sm text-zinc-600">{hint}</p> : null}
     </div>
   );
 }

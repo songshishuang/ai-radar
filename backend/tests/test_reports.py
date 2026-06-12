@@ -33,7 +33,7 @@ def _seed_enriched(db_session, n=5, high_scores=2):
     db_session.add(s)
     db_session.flush()
     now = datetime.now(timezone.utc)
-    cats = ["paradigm", "tech", "opensource", "product"]
+    cats = ["model-release", "dev-tooling", "opensource", "business"]
     for i in range(n):
         it = Item(
             source_id=s.id,
@@ -57,19 +57,21 @@ def _seed_enriched(db_session, n=5, high_scores=2):
     db_session.commit()
 
 
-def test_build_daily_full_structure(db_session, tmp_path, monkeypatch):
+def test_build_daily_pyramid_structure(db_session, tmp_path, monkeypatch):
     monkeypatch.setattr("app.pipeline.reports.REPORTS_DIR", tmp_path)
     _seed_enriched(db_session, n=5, high_scores=2)
-    p = MockProvider(responses=[DEEP_RESPONSE, DEEP_RESPONSE])
+    # 顺序：2 条 ≥8 深度分析 + 1 次 TL;DR
+    p = MockProvider(responses=[DEEP_RESPONSE, DEEP_RESPONSE, "速览第一句。第二句。第三句。"])
     report = build_daily(db_session, date_str="2026-06-12", provider=p)
     assert report.type == "daily" and report.period_date == "2026-06-12"
-    assert "🔥 今日头条" in report.markdown
+    assert "⚡ 今日速览" in report.markdown
+    assert "🔥 今日必读" in report.markdown
     assert "重磅模型发布" in report.markdown
-    assert "📋 分类速览" in report.markdown
-    assert "📊 管道状态" in report.markdown
+    assert "本期共收录 **5**" in report.markdown
     assert "<h1" in report.html
     stats = json.loads(report.stats)
     assert stats["total"] == 5
+    assert stats["tldr"].startswith("速览")
     assert (tmp_path / "daily-2026-06-12.md").exists()
 
 
@@ -87,7 +89,7 @@ def test_build_daily_degrades_without_headlines(db_session, tmp_path, monkeypatc
     p = MockProvider(responses=["bad", "bad"])  # 深度分析失败 → 降级高分清单
     report = build_daily(db_session, date_str="2026-06-13", provider=p)
     assert "今日高分条目" in report.markdown
-    assert "分类速览" in report.markdown
+    assert "本期共收录" in report.markdown
 
 
 def test_build_weekly_structure(db_session, tmp_path, monkeypatch):
@@ -99,4 +101,4 @@ def test_build_weekly_structure(db_session, tmp_path, monkeypatch):
     assert "本周大事记" in report.markdown
     assert "四维趋势综述" in report.markdown
     assert "下周关注" in report.markdown
-    assert "高分 Top 10" in report.markdown
+    assert "本周其他高分条目" in report.markdown

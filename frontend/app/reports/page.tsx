@@ -38,17 +38,20 @@ export default async function ReportsPage({
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold tracking-tight">报告归档</h1>
+      <h1 className="text-gradient mb-6 inline-block text-2xl font-bold tracking-tight">
+        报告归档
+      </h1>
 
-      <div className="mb-6 flex gap-1 border-b border-gray-200">
+      {/* type tab：渐变下划线激活态 */}
+      <div className="mb-6 flex gap-6 border-b border-white/[0.06] pb-px">
         {REPORT_TYPES.map((t) => (
           <Link
             key={t}
             href={`/reports?type=${t}`}
-            className={`-mb-px border-b-2 px-4 py-2 text-sm font-medium ${
+            className={`gradient-underline pb-2 text-sm font-medium transition-colors ${
               t === type
-                ? "border-blue-600 text-blue-600"
-                : "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700"
+                ? "is-active text-zinc-50"
+                : "text-zinc-500 hover:text-zinc-300"
             }`}
           >
             {REPORT_TYPE_LABELS[t]}

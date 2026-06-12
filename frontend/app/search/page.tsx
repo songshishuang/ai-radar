@@ -35,19 +35,24 @@ export default async function SearchPage({
 
   return (
     <div>
-      <h1 className="mb-6 text-2xl font-bold tracking-tight">搜索</h1>
+      <h1 className="text-gradient mb-6 inline-block text-2xl font-bold tracking-tight">
+        搜索
+      </h1>
 
       <form action="/search" method="get" className="mb-8 flex gap-2">
-        <input
-          type="search"
-          name="q"
-          defaultValue={q}
-          placeholder="搜索标题、摘要关键词…"
-          className="w-full rounded-md border border-gray-300 bg-white px-4 py-2 text-sm shadow-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
-        />
+        {/* 渐变描边输入框：wrapper p-px，focus-within 时渐变点亮 */}
+        <div className="w-full rounded-xl bg-white/10 p-px transition focus-within:bg-gradient-to-r focus-within:from-violet-500 focus-within:via-blue-500 focus-within:to-cyan-400 focus-within:shadow-[0_0_18px_rgba(99,102,241,0.25)]">
+          <input
+            type="search"
+            name="q"
+            defaultValue={q}
+            placeholder="搜索标题、摘要、公司 / 产品名…"
+            className="w-full rounded-[11px] bg-[#101016] px-4 py-2.5 text-sm text-zinc-200 outline-none placeholder:text-zinc-600"
+          />
+        </div>
         <button
           type="submit"
-          className="shrink-0 rounded-md bg-blue-600 px-5 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          className="bg-accent-gradient shrink-0 rounded-xl px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
         >
           搜索
         </button>
@@ -56,8 +61,12 @@ export default async function SearchPage({
       {q ? (
         items.length > 0 ? (
           <>
-            <p className="mb-4 text-sm text-gray-500">
-              「{q}」共 {items.length} 条结果
+            <p className="mb-4 text-sm text-zinc-500">
+              「<span className="text-zinc-300">{q}</span>」共{" "}
+              <span className="tabular-nums text-zinc-300">
+                {items.length}
+              </span>{" "}
+              条结果
             </p>
             <div className="space-y-4">
               {items.map((item) => (
@@ -78,7 +87,7 @@ export default async function SearchPage({
           />
         )
       ) : (
-        <p className="text-center text-sm text-gray-400">
+        <p className="text-center text-sm text-zinc-600">
           输入关键词，搜索全部情报条目。
         </p>
       )}
