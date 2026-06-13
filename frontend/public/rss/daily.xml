@@ -1,4 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-12</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-12/</link><guid isPermaLink="false">daily-2026-06-12</guid><pubDate>Fri, 12 Jun 2026 16:51:00 -0000</pubDate><description># AI 情报日报 · 2026-06-12
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-13</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-13/</link><guid isPermaLink="false">daily-2026-06-13</guid><pubDate>Sat, 13 Jun 2026 11:28:55 -0000</pubDate><description># AI 情报日报 · 2026-06-13
+
+_☕ 正文约 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+监管首次「拔插头」——美政府勒令 Anthropic 暂停在产的 Claude Fable 5 / Mythos 5，供应商可用性升级为产品级风险；OpenAI 三线齐发（IPO 申报 / 代号 5.6 新模型 / 成立 Robotics 部门），MANGOS 资本超级周期续演（Mistral 拟融 €3B@€20B、Bezos 的 Prometheus $12B）；开源编码模型 Kimi K2.7-Code 当日上 Vercel AI Gateway，社区 skill / MCP 生态（500+ servers、addyosmani/agent-skills）加速沉淀。
+
+## 🔥 今日必读
+
+**1. [美政府勒令暂停 Claude Fable 5 / Mythos 5，Anthropic 公开反对](https://news.ycombinator.com/item?id=46012)** `10/10` · Anthropic 官方 / HN 2433 / TechCrunch / Vercel Gateway · `Anthropic` `监管`
+⚡ 监管首次直接下架在产商用大模型，"供应商随时不可用"从理论变现实——模型选型必须配冗余。
+👉 本周盘点产品中所有强依赖单一闭源模型的链路，为每条关键链路准备 1 个可热切换备选（开源或他厂）。
+
+**2. [OpenAI 三连：IPO 申报 + 代号 5.6 新模型 + 成立 Robotics 部门](https://finance.yahoo.com/markets/stocks/articles/openai-ipo-sam-altman-reportedly-202942</description></item><item><title>AI 情报日报 · 2026-06-12</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-12/</link><guid isPermaLink="false">daily-2026-06-12</guid><pubDate>Fri, 12 Jun 2026 16:51:00 -0000</pubDate><description># AI 情报日报 · 2026-06-12
 
 _☕ 正文 2 分钟读完 · 深度解读见文末附录_
 
