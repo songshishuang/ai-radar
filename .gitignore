@@ -19,3 +19,6 @@ data/*.db-journal
 
 # OS
 .DS_Store
+
+# Skill eval workspace
+ai-radar-workspace/
