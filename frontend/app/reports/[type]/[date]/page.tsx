@@ -1,11 +1,13 @@
 import Link from "next/link";
 import EmptyState from "@/components/EmptyState";
-import { getJSON } from "@/lib/api";
 import { REPORT_TYPE_LABELS } from "@/lib/constants";
+import { getReport, getReports } from "@/lib/content";
 import { formatDateTime } from "@/lib/format";
-import type { ReportDetail } from "@/lib/types";
 
-export const dynamic = "force-dynamic";
+/** 静态导出：枚举全部报告，为每份生成一个静态页面 */
+export function generateStaticParams() {
+  return getReports().map((r) => ({ type: r.type, date: r.period_date }));
+}
 
 export default async function ReportDetailPage({
   params,
@@ -17,14 +19,7 @@ export default async function ReportDetailPage({
   const date = decodeURIComponent(rawDate);
   const typeLabel = REPORT_TYPE_LABELS[type] ?? "报告";
 
-  let report: ReportDetail | null = null;
-  try {
-    report = await getJSON<ReportDetail>(
-      `/api/reports/${encodeURIComponent(type)}/${encodeURIComponent(date)}`
-    );
-  } catch {
-    // 渲染空态
-  }
+  const report = getReport(type, date);
 
   return (
     <div>

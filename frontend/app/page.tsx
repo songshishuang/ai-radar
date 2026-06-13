@@ -3,16 +3,9 @@ import CategoryStats from "@/components/CategoryStats";
 import EmptyState from "@/components/EmptyState";
 import HeadlineCard from "@/components/HeadlineCard";
 import ReportList from "@/components/ReportList";
-import {
-  getJSON,
-  markdownExcerpt,
-  parseHeadlines,
-  parseReportStats,
-} from "@/lib/api";
+import { markdownExcerpt, parseHeadlines, parseReportStats } from "@/lib/api";
+import { getLatestReport, getReports } from "@/lib/content";
 import { formatDateTime } from "@/lib/format";
-import type { ReportDetail, ReportSummary } from "@/lib/types";
-
-export const dynamic = "force-dynamic";
 
 const WEEKDAYS = ["日", "一", "二", "三", "四", "五", "六"];
 
@@ -24,30 +17,9 @@ function todayLabel(): string {
   return `${y}-${m}-${d} 星期${WEEKDAYS[now.getDay()]}`;
 }
 
-export default async function HomePage() {
-  let latestReport: ReportDetail | null = null;
-  let recentReports: ReportSummary[] = [];
-
-  try {
-    const latest = await getJSON<ReportSummary[]>(
-      "/api/reports?type=daily&limit=1"
-    );
-    if (latest.length > 0) {
-      latestReport = await getJSON<ReportDetail>(
-        `/api/reports/daily/${encodeURIComponent(latest[0].period_date)}`
-      );
-    }
-  } catch {
-    // 后端未连接或暂无数据，渲染空态
-  }
-
-  try {
-    recentReports = await getJSON<ReportSummary[]>(
-      "/api/reports?type=daily&limit=7"
-    );
-  } catch {
-    // 忽略，列表区展示空提示
-  }
+export default function HomePage() {
+  const latestReport = getLatestReport("daily");
+  const recentReports = getReports("daily").slice(0, 7);
 
   const stats = latestReport ? parseReportStats(latestReport.stats) : null;
   const headlines = latestReport
@@ -155,8 +127,8 @@ export default async function HomePage() {
       ) : (
         <div className="mx-auto max-w-2xl space-y-6">
           <EmptyState
-            message="后端未连接或暂无数据"
-            hint="暂时没有可展示的日报。启动后端服务（http://localhost:8000）并生成报告后，这里会自动展示今日情报。"
+            message="暂无日报数据"
+            hint="本地运行管道生成报告并执行发布脚本后，这里会展示最新一期日报。"
           />
           <div className="flex justify-center gap-3 text-sm">
             <Link

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { API_BASE } from "@/lib/api";
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -74,7 +74,7 @@ export default function RootLayout({
               AI Intel
             </span>
             <a
-              href={`${API_BASE}/rss/daily.xml`}
+              href={`${BASE_PATH}/rss/daily.xml`}
               className="transition-colors hover:text-cyan-400"
             >
               RSS 订阅 /rss/daily.xml

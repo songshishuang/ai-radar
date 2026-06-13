@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-12</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-12/</link><guid isPermaLink="false">daily-2026-06-12</guid><pubDate>Fri, 12 Jun 2026 16:51:00 -0000</pubDate><description># AI 情报日报 · 2026-06-12
+
+_☕ 正文 2 分钟读完 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+开源模型（DeepSeek-R1、Kimi K2.7-Code）与Agent框架（Vercel SDK 7）成熟，工程工具链完整。IPO启动MANGOS资本集团，Prometheus 120亿融资标志物理世界AI崛起。应用创新全面落地，Agent工程化与成本优化驱动提效，Anthropic防护栏风波警示AI安全透明度需加强。
+
+## 🔥 今日必读
+
+**1. [DeepSeek-R1 开源复现发布，推理模型本地化部署成真](https://github.com/huggingface/open-r1)** `9/10` · Hacker News AI
+⚡ 高性能推理模型从「云端付费」变「本地自建」，PM 可用近零成本验证推理驱动的产品形态。
+👉 本周在本地跑通 Open-R1 最小复现版本（7B 蒸馏），测试 1-2 个现有产品内的推理任务节点，记录与云端 API 的成本与质量差异
+
+**2. [Anthropic/OpenAI/SpaceX集体冲刺IPO，MANGOS时代取代FAANG](https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer)** `9/10` · TechCrunch AI
+⚡ AI基础设施公司批量上市将把商业化压力传导至每个API调用方，PM的AI选型必须纳入供应商财务稳定性与定价变动风险。
+👉 本周联系Anthropic/OpenAI企业销售，摸排S-1前的年框锁价政策，重点争取定价保护条款和优先级SLA
+
+**3. [MANGOS时代：Anthropic等AI巨头扎堆IPO，估值压力测试开始](https://techcrunch.c</description></item></channel></rss>
