@@ -5,7 +5,10 @@ from datetime import datetime, timezone
 
 import httpx
 
-KEYWORDS = ["AI", "LLM", "GPT", "Claude", "Gemini", "agent", "open source model"]
+KEYWORDS = [
+    "AI", "LLM", "GPT", "Claude", "Gemini", "agent", "open source model",
+    "MCP", "agent skill", "Claude skill",  # 社区 skill/工具生态跟踪
+]
 MIN_POINTS = 100
 LOOKBACK_SECONDS = 36 * 3600
 

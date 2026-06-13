@@ -63,8 +63,21 @@ def test_github_trending_parse_and_ai_filter():
     assert items[0].extra["stars"] == "1234"
 
 
+def test_hf_spaces_parse():
+    from app.fetchers.huggingface import parse_spaces
+
+    data = [
+        {"id": "acme/cool-ai-app", "likes": 209, "sdk": "gradio", "createdAt": "2026-06-10T00:00:00.000Z"},
+        {"id": "", "likes": 5},  # 无 id 应跳过
+    ]
+    items = parse_spaces(data)
+    assert len(items) == 1
+    assert items[0].url == "https://huggingface.co/spaces/acme/cool-ai-app"
+    assert "gradio" in items[0].content
+
+
 def test_fetchers_registry():
     from app.fetchers import FETCHERS
 
-    assert {"rss", "hackernews", "github_trending", "hf_papers", "hf_models", "reddit"} <= set(FETCHERS)
+    assert {"rss", "hackernews", "github_trending", "hf_papers", "hf_models", "hf_spaces", "reddit"} <= set(FETCHERS)
     assert "rsshub" not in FETCHERS

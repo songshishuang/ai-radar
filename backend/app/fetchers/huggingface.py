@@ -82,3 +82,38 @@ def fetch_hf_models(source) -> list:
     )
     r.raise_for_status()
     return parse_models(r.json())
+
+
+def parse_spaces(data: list) -> list:
+    """HF Spaces trending（热门 AI 应用 demo）。"""
+    from app.fetchers import RawItem
+
+    items = []
+    for s in data:
+        sid = s.get("id") or ""
+        if not sid:
+            continue
+        sdk = s.get("sdk") or ""
+        items.append(
+            RawItem(
+                title=f"HF Space: {sid}",
+                url=f"https://huggingface.co/spaces/{sid}",
+                published_at=_parse_dt(s.get("createdAt")),
+                content=f"AI 应用 demo（sdk: {sdk}）; likes: {s.get('likes', 0)}",
+                extra={"likes": s.get("likes", 0), "sdk": sdk},
+            )
+        )
+    return items
+
+
+def fetch_hf_spaces(source) -> list:
+    from app.fetchers import HTTP_TIMEOUT, USER_AGENT
+
+    r = httpx.get(
+        "https://huggingface.co/api/spaces",
+        params={"sort": "trendingScore", "direction": -1, "limit": 15},
+        headers={"User-Agent": USER_AGENT},
+        timeout=HTTP_TIMEOUT,
+    )
+    r.raise_for_status()
+    return parse_spaces(r.json())

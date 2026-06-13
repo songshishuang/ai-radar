@@ -19,7 +19,11 @@ class RawItem:
 
 from app.fetchers.github_trending import fetch_github_trending  # noqa: E402
 from app.fetchers.hackernews import fetch_hackernews  # noqa: E402
-from app.fetchers.huggingface import fetch_hf_models, fetch_hf_papers  # noqa: E402
+from app.fetchers.huggingface import (  # noqa: E402
+    fetch_hf_models,
+    fetch_hf_papers,
+    fetch_hf_spaces,
+)
 from app.fetchers.reddit import fetch_reddit  # noqa: E402
 from app.fetchers.rss import fetch_rss  # noqa: E402
 
@@ -29,6 +33,7 @@ FETCHERS: dict[str, Callable[[Source], list[RawItem]]] = {
     "github_trending": fetch_github_trending,
     "hf_papers": fetch_hf_papers,
     "hf_models": fetch_hf_models,
+    "hf_spaces": fetch_hf_spaces,
     "reddit": fetch_reddit,
     # "rsshub" 故意不注册：本地无 RSSHub 实例，ingest 会将其标记 degraded
 }

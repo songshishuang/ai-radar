@@ -30,6 +30,15 @@ SEED_SOURCES: list[dict] = [
     # Reddit 屏蔽数据中心/脚本 UA（403），降级禁用；社区热点由 HN 覆盖，VPS 部署可改走 RSSHub
     {"category": "community", "name": "r/LocalLLaMA", "fetch_method": "reddit", "url": "https://www.reddit.com/r/LocalLLaMA/top.json?t=day&limit=25", "enabled": False},
     {"category": "community", "name": "r/MachineLearning", "fetch_method": "reddit", "url": "https://www.reddit.com/r/MachineLearning/top.json?t=day&limit=25", "enabled": False},
+    # ── 社区 Skill / AI 应用生态跟踪（第一批：稳定可抓）──
+    {"category": "community", "name": "awesome-claude-code", "fetch_method": "rss", "url": "https://github.com/hesreallyhim/awesome-claude-code/commits/main.atom"},
+    {"category": "community", "name": "awesome-mcp-servers", "fetch_method": "rss", "url": "https://github.com/punkpeye/awesome-mcp-servers/commits/main.atom"},
+    {"category": "community", "name": "MCP Servers (官方)", "fetch_method": "rss", "url": "https://github.com/modelcontextprotocol/servers/releases.atom"},
+    {"category": "community", "name": "HF Spaces 热门", "fetch_method": "hf_spaces", "url": "https://huggingface.co/api/spaces"},
+    # ── 第二批：marketplace / 社区讨论（无 RSS，VPS 部署 RSSHub 后启用）──
+    {"category": "community", "name": "MCP Marketplace (mcp.so)", "fetch_method": "rsshub", "url": "rsshub://mcp.so", "enabled": False},
+    {"category": "community", "name": "r/ClaudeAI", "fetch_method": "reddit", "url": "https://www.reddit.com/r/ClaudeAI/top.json?t=day&limit=25", "enabled": False},
+    {"category": "community", "name": "r/mcp", "fetch_method": "reddit", "url": "https://www.reddit.com/r/mcp/top.json?t=day&limit=25", "enabled": False},
     # ── 行业媒体 / Newsletter ──
     {"category": "media", "name": "TechCrunch AI", "fetch_method": "rss", "url": "https://techcrunch.com/category/artificial-intelligence/feed/"},
     {"category": "media", "name": "The Verge AI", "fetch_method": "rss", "url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml"},
