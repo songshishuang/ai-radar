@@ -24,13 +24,13 @@ export default async function ReportDetailPage({
   return (
     <div>
       <nav className="mb-5 text-sm text-zinc-500" aria-label="面包屑">
-        <Link href="/" className="transition-colors hover:text-cyan-400">
+        <Link href="/" className="transition-colors hover:text-accent">
           首页
         </Link>
         <span className="mx-1.5 text-zinc-700">/</span>
         <Link
           href={`/reports?type=${encodeURIComponent(type)}`}
-          className="transition-colors hover:text-cyan-400"
+          className="transition-colors hover:text-accent"
         >
           {typeLabel}归档
         </Link>
@@ -56,7 +56,7 @@ export default async function ReportDetailPage({
             </p>
           </header>
           <article
-            className="prose prose-invert max-w-none prose-headings:tracking-tight prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-violet-500/60 prose-blockquote:text-zinc-400 prose-strong:text-zinc-100 prose-hr:border-white/[0.08]"
+            className="prose prose-invert max-w-none prose-headings:tracking-tight prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-accent/50 prose-blockquote:text-zinc-400 prose-strong:text-zinc-100 prose-hr:border-white/[0.08]"
             dangerouslySetInnerHTML={{ __html: report.html }}
           />
         </>

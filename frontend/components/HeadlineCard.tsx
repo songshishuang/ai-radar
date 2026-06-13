@@ -44,7 +44,7 @@ export default function HeadlineCard({ item }: { item: HeadlineAnalysis }) {
           </div>
         </div>
         {item.so_what || item.background ? (
-          <p className="mt-2 text-sm leading-relaxed text-cyan-200/90">
+          <p className="mt-2 text-sm leading-relaxed text-accent">
             <span aria-hidden className="mr-1">⚡</span>
             {item.so_what ?? item.background?.split("。")[0] + "。"}
           </p>
@@ -85,7 +85,7 @@ export default function HeadlineCard({ item }: { item: HeadlineAnalysis }) {
                       key={i}
                       className="flex gap-2 text-sm leading-relaxed text-zinc-300"
                     >
-                      <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-cyan-400" />
+                      <span className="mt-[7px] h-1 w-1 shrink-0 rounded-full bg-accent" />
                       {action}
                     </li>
                   ))}
@@ -101,7 +101,7 @@ export default function HeadlineCard({ item }: { item: HeadlineAnalysis }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
-                  className="text-cyan-400/80 transition-colors hover:text-cyan-300"
+                  className="text-accent transition-opacity hover:opacity-80"
                 >
                   阅读原文 ↗
                 </a>

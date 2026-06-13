@@ -25,7 +25,7 @@ export default function CategoryStats({
               style={{ width: `${Math.max((count / max) * 100, 4)}%` }}
             />
           </span>
-          <span className="w-6 shrink-0 text-right tabular-nums text-zinc-500">
+          <span className="w-6 shrink-0 text-right font-mono tabular text-zinc-500">
             {count}
           </span>
         </div>

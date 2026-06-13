@@ -17,7 +17,7 @@ const SCORE_TABS = [
   { key: 8, label: "≥8 必读" },
 ];
 
-/** 信息流：客户端分类 / 重要度 / 关键词筛选（全部条目构建期注入）。 */
+/** 信息流：分面筛选（分类 × 实体 × 重要度 × 关键词），全部条目构建期注入。 */
 export default function FeedBrowser({
   items,
   initialQuery = "",
@@ -28,12 +28,36 @@ export default function FeedBrowser({
   const [category, setCategory] = useState("");
   const [minScore, setMinScore] = useState(0);
   const [q, setQ] = useState(initialQuery);
+  const [activeEntities, setActiveEntities] = useState<string[]>([]);
+
+  // 实体 facet：按出现频次取 Top 16（公司/产品规范名），作为可多选筛选轴
+  const topEntities = useMemo(() => {
+    const freq = new Map<string, number>();
+    for (const it of items) {
+      for (const e of it.entities ?? []) freq.set(e, (freq.get(e) ?? 0) + 1);
+    }
+    return [...freq.entries()]
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 16)
+      .map(([name]) => name);
+  }, [items]);
+
+  function toggleEntity(name: string) {
+    setActiveEntities((prev) =>
+      prev.includes(name) ? prev.filter((e) => e !== name) : [...prev, name]
+    );
+  }
 
   const filtered = useMemo(() => {
     const kw = q.trim().toLowerCase();
     return items.filter((it) => {
       if (category && it.category !== category) return false;
       if (minScore && it.importance_score < minScore) return false;
+      if (
+        activeEntities.length &&
+        !(it.entities ?? []).some((e) => activeEntities.includes(e))
+      )
+        return false;
       if (kw) {
         const hay = `${it.title} ${it.summary_zh} ${(it.entities ?? []).join(
           " "
@@ -42,7 +66,7 @@ export default function FeedBrowser({
       }
       return true;
     });
-  }, [items, category, minScore, q]);
+  }, [items, category, minScore, q, activeEntities]);
 
   return (
     <div>
@@ -102,8 +126,43 @@ export default function FeedBrowser({
           placeholder="筛选关键词…"
           className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-zinc-200 outline-none transition focus:border-white/30 placeholder:text-zinc-600"
         />
-        <span className="text-zinc-600 tabular-nums">{filtered.length} 条</span>
+        <span className="font-mono tabular text-zinc-600">
+          {filtered.length} 条
+        </span>
       </div>
+
+      {/* 实体 facet：公司/产品多选轴（分面分类） */}
+      {topEntities.length > 0 ? (
+        <div className="mb-6 flex flex-wrap items-center gap-1.5">
+          <span className="mr-1 font-mono text-xs text-zinc-600">entities</span>
+          {topEntities.map((name) => {
+            const active = activeEntities.includes(name);
+            return (
+              <button
+                key={name}
+                type="button"
+                onClick={() => toggleEntity(name)}
+                className={`rounded-md border px-1.5 py-0.5 font-mono text-xs transition-colors ${
+                  active
+                    ? "border-accent/60 bg-accent-soft text-accent"
+                    : "border-edge text-zinc-500 hover:border-edge-strong hover:text-zinc-300"
+                }`}
+              >
+                {name}
+              </button>
+            );
+          })}
+          {activeEntities.length > 0 ? (
+            <button
+              type="button"
+              onClick={() => setActiveEntities([])}
+              className="ml-1 text-xs text-zinc-600 underline-offset-2 hover:text-accent hover:underline"
+            >
+              清除
+            </button>
+          ) : null}
+        </div>
+      ) : null}
 
       {filtered.length > 0 ? (
         <div className="space-y-4">

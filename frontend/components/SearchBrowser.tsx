@@ -27,7 +27,7 @@ export default function SearchBrowser({ items }: { items: FeedItem[] }) {
       </h1>
 
       <div className="mb-8 flex gap-2">
-        <div className="w-full rounded-xl bg-white/10 p-px transition focus-within:bg-gradient-to-r focus-within:from-violet-500 focus-within:via-blue-500 focus-within:to-cyan-400 focus-within:shadow-[0_0_18px_rgba(99,102,241,0.25)]">
+        <div className="w-full rounded-xl bg-white/10 p-px transition focus-within:bg-accent focus-within:shadow-[0_0_18px_var(--accent-glow)]">
           <input
             type="search"
             value={q}

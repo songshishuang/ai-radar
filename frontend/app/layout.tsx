@@ -24,26 +24,40 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-CN" className="dark">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* 运行时加载等宽字体（无构建期网络依赖），离线则回落系统 mono */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap"
+        />
+      </head>
       <body className="relative flex min-h-screen flex-col overflow-x-hidden bg-void font-sans text-zinc-300">
-        {/* 背景光晕：顶部 violet / blue 模糊光斑 */}
+        {/* 全局底纹：极淡网格 + 边缘淡出（纯 CSS，零依赖） */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[480px] overflow-hidden"
+          className="bg-grid mask-edge pointer-events-none fixed inset-0 -z-20 opacity-[0.4]"
+        />
+        {/* 单一 accent 顶部辉光（收敛自三色光斑） */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[420px] overflow-hidden"
         >
-          <div className="absolute -top-32 left-1/4 h-80 w-80 rounded-full bg-violet-600 opacity-20 blur-3xl" />
-          <div className="absolute -top-20 right-1/4 h-72 w-72 rounded-full bg-blue-600 opacity-20 blur-3xl" />
-          <div className="absolute top-10 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full bg-cyan-500 opacity-10 blur-3xl" />
+          <div className="absolute -top-28 left-1/2 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-accent opacity-[0.12] blur-3xl" />
         </div>
 
-        <header className="sticky top-0 z-20 border-b border-white/[0.06] bg-void/70 backdrop-blur-xl">
+        <header className="sticky top-0 z-20 border-b border-edge bg-void/70 backdrop-blur-xl">
           <nav className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-2 px-4 py-3">
             <Link href="/" className="flex items-center gap-2">
               <span
                 aria-hidden
-                className="h-5 w-5 rounded-md bg-gradient-to-br from-violet-500 via-blue-500 to-cyan-400 shadow-[0_0_14px_rgba(99,102,241,0.5)]"
-              />
-              <span className="text-lg font-bold tracking-tight text-zinc-50">
-                AI 情报站
+                className="grid h-5 w-5 place-items-center rounded-md border border-accent/40 bg-accent/10 text-[10px] font-bold text-accent shadow-[0_0_14px_var(--accent-glow)]"
+              >
+                ◢
+              </span>
+              <span className="font-mono text-base font-semibold tracking-tight text-zinc-50">
+                ai<span className="text-accent">·</span>radar
               </span>
             </Link>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm text-zinc-400">
@@ -69,13 +83,13 @@ export default function RootLayout({
             <span className="flex items-center gap-2">
               <span
                 aria-hidden
-                className="h-3 w-3 rounded-sm bg-gradient-to-br from-violet-500 via-blue-500 to-cyan-400 opacity-70"
+                className="h-3 w-3 rounded-sm bg-accent opacity-70"
               />
               AI Intel
             </span>
             <a
               href={`${BASE_PATH}/rss/daily.xml`}
-              className="transition-colors hover:text-cyan-400"
+              className="transition-colors hover:text-accent"
             >
               RSS 订阅 /rss/daily.xml
             </a>

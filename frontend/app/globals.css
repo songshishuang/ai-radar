@@ -2,43 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ──────────────────────────────────────────────────────────
+   设计 token（OKLCH，感知均匀）。据标杆调研：中性为主 + 单一 accent。
+   ────────────────────────────────────────────────────────── */
 :root {
   color-scheme: dark;
+
+  /* 组件值（仅 OKLCH 分量，供 Tailwind alpha 修饰符 oklch(var(--x)/<alpha-value>)）。
+     统一微冷色相 265，lightness 阶梯均匀。 */
+  --bg: 0.14 0.012 265;
+  --surface-1: 0.18 0.013 265;
+  --surface-2: 0.22 0.014 265;
+  /* 单一 accent：清冷青蓝（technical），承载语义时才出现 */
+  --accent: 0.78 0.13 220;
+  --accent-strong: 0.7 0.15 222;
+
+  /* 完整色值（供原生 CSS 直接使用，不经 Tailwind alpha） */
+  --border: oklch(1 0 0 / 0.08);
+  --border-strong: oklch(1 0 0 / 0.16);
+  --accent-soft: oklch(0.78 0.13 220 / 0.14);
+  --accent-glow: oklch(0.78 0.13 220 / 0.5);
+  /* 仅 wordmark / 英雄区使用的克制双停渐变（靛→青），别处不用 */
+  --grad-hero: linear-gradient(120deg, oklch(0.72 0.13 270), oklch(0.8 0.12 210));
+
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
 body {
+  background: oklch(var(--bg));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* 数字默认走等宽列宽（资讯站大量分数/计数/时间） */
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
 @layer components {
-  /* 玻璃拟态卡片：半透明深色底 + 模糊 + 1px 亮边 */
+  /* 玻璃拟态卡片：抬升面 + 1px 亮边（克制，不再叠厚模糊） */
   .glass-card {
-    @apply rounded-xl border border-edge bg-panel backdrop-blur-md;
+    @apply rounded-xl border border-edge bg-panel/80 backdrop-blur-sm;
   }
 
-  /* 卡片 hover：边框变亮 + 上浮 2px */
   .card-hover {
-    @apply transition duration-200 hover:-translate-y-0.5 hover:border-white/20;
+    @apply transition duration-200 hover:-translate-y-0.5 hover:border-edge-strong;
   }
 
-  /* 品牌渐变文字 */
+  /* wordmark 渐变文字：仅站名/英雄区用，克制双停（靛→青） */
   .text-gradient {
-    @apply bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400 bg-clip-text text-transparent;
+    background: var(--grad-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
 
-  /* 浅一档的渐变文字（深底上可读性更好） */
+  /* 标题：默认中性近白 + 紧字距（页面 h1 用这个，不再满屏渐变） */
+  .text-heading {
+    @apply font-semibold tracking-tight text-zinc-50;
+  }
+
+  /* 次级强调：单色 accent 文字（替代旧的彩虹 soft 渐变） */
   .text-gradient-soft {
-    @apply bg-gradient-to-r from-violet-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent;
+    color: oklch(var(--accent));
   }
 
-  /* 品牌渐变填充（按钮 / 激活 chip） */
+  /* accent 填充（按钮 / 激活 chip）：单色，不再三色渐变 */
   .bg-accent-gradient {
-    @apply bg-gradient-to-r from-violet-500 via-blue-500 to-cyan-400;
+    background: oklch(var(--accent));
+    @apply text-[#06121a];
   }
 }
 
-/* ---- 重要内容卡片：左侧 2px 渐变竖条 ---- */
+/* ── 纯 CSS 科技底纹（零依赖，调研快赢） ── */
+
+/* 网格底：两条 1px 线平铺 */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* 点阵底：单点平铺 */
+.bg-dots {
+  background-image: radial-gradient(var(--border-strong) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+/* 边缘淡出遮罩：中心实、四周透明，让底纹自然收边（无需额外 DOM） */
+.mask-edge {
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 40%, #000 55%, transparent 100%);
+}
+
+/* ── 重要内容卡片：左侧 2px accent 竖条（单色，不再渐变） ── */
 .accent-left {
   position: relative;
 }
@@ -50,10 +108,10 @@ body {
   bottom: 14px;
   width: 2px;
   border-radius: 2px;
-  background: linear-gradient(180deg, #8b5cf6, #3b82f6, #22d3ee);
+  background: oklch(var(--accent));
 }
 
-/* ---- 导航 / Tab：渐变下划线（hover 展开，激活常驻） ---- */
+/* ── 导航 / Tab：accent 下划线（hover 展开，激活常驻） ── */
 .gradient-underline {
   position: relative;
 }
@@ -65,7 +123,7 @@ body {
   bottom: -3px;
   height: 2px;
   border-radius: 2px;
-  background: linear-gradient(90deg, #8b5cf6, #3b82f6, #22d3ee);
+  background: oklch(var(--accent));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.2s ease;
@@ -75,7 +133,7 @@ body {
   transform: scaleX(1);
 }
 
-/* ---- 横向滚动条隐藏（分类 chip 滚动条） ---- */
+/* ── 横向滚动条隐藏 ── */
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -84,7 +142,7 @@ body {
   display: none;
 }
 
-/* ---- 订阅成功：打勾动画 ---- */
+/* ── 订阅成功：打勾动画 ── */
 @keyframes check-pop {
   0% {
     transform: scale(0.5);
@@ -110,4 +168,16 @@ body {
   stroke-dasharray: 48;
   stroke-dashoffset: 48;
   animation: check-draw 0.45s ease 0.25s forwards;
+}
+
+/* ── 加密文字 / 逐词淡入：客户端组件用的关键帧 ── */
+@keyframes word-in {
+  from {
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
 }

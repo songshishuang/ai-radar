@@ -1,8 +1,11 @@
 import Link from "next/link";
 import CategoryStats from "@/components/CategoryStats";
 import EmptyState from "@/components/EmptyState";
+import EncryptedText from "@/components/EncryptedText";
 import HeadlineCard from "@/components/HeadlineCard";
+import HeroCanvas from "@/components/HeroCanvas";
 import ReportList from "@/components/ReportList";
+import TextGenerate from "@/components/TextGenerate";
 import { markdownExcerpt, parseHeadlines, parseReportStats } from "@/lib/api";
 import { getLatestReport, getReports } from "@/lib/content";
 import { formatDateTime } from "@/lib/format";
@@ -31,20 +34,30 @@ export default function HomePage() {
 
   return (
     <div className="space-y-10">
-      {/* Hero：渐变大标题 + 当日日期 */}
-      <section className="pt-4 text-center">
-        <h1 className="text-gradient text-4xl font-bold tracking-tight sm:text-5xl">
-          AI 情报站
-        </h1>
-        <p className="mt-3 text-sm tabular-nums text-zinc-500">
-          {todayLabel()}
+      {/* Hero：WebGL 极光背景 + wordmark + AI-native 文字 */}
+      <section className="relative -mx-4 overflow-hidden border-b border-edge px-4 pb-12 pt-10 sm:pt-14">
+        <HeroCanvas className="pointer-events-none absolute inset-0 -z-10 h-full w-full opacity-80" />
+        <div
+          aria-hidden
+          className="bg-dots mask-edge pointer-events-none absolute inset-0 -z-10 opacity-30"
+        />
+        <div className="relative text-center">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-edge bg-white/[0.03] px-3 py-1 font-mono text-xs text-zinc-400 backdrop-blur-sm">
+            <span className="h-1.5 w-1.5 animate-pulse-dot rounded-full bg-accent" />
+            <EncryptedText text={`LIVE // ${todayLabel()}`} />
+          </div>
+          <h1 className="text-gradient text-4xl font-bold tracking-tight sm:text-5xl">
+            AI 情报站
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-zinc-400">
+            <TextGenerate text="聚合国外核心 AI 源 · PM 视角中文深度研报 · 每日 2 分钟读完" />
+          </p>
           {latestReport ? (
-            <>
-              <span className="mx-2 text-zinc-700">·</span>
+            <p className="mt-3 font-mono text-xs tabular text-zinc-600">
               最新日报 {latestReport.period_date}
-            </>
+            </p>
           ) : null}
-        </p>
+        </div>
       </section>
 
       {latestReport ? (
@@ -56,13 +69,27 @@ export default function HomePage() {
                 <h2 className="mb-2 flex items-center gap-2 text-sm font-semibold text-zinc-50">
                   <span aria-hidden>⚡</span> 今日速览
                 </h2>
-                <p className="text-sm leading-relaxed text-zinc-300">{tldr}</p>
+                <p className="text-sm leading-relaxed text-zinc-300">
+                  <TextGenerate text={tldr} stagger={0.01} />
+                </p>
                 <p className="mt-3 text-xs text-zinc-600">
-                  {stats?.total ? `共收录 ${stats.total} 条情报 · ` : ""}
-                  生成于 {formatDateTime(latestReport.created_at)} ·{" "}
+                  {stats?.total ? (
+                    <>
+                      共收录{" "}
+                      <span className="font-mono tabular text-zinc-400">
+                        {stats.total}
+                      </span>{" "}
+                      条情报 ·{" "}
+                    </>
+                  ) : null}
+                  生成于{" "}
+                  <span className="font-mono tabular">
+                    {formatDateTime(latestReport.created_at)}
+                  </span>{" "}
+                  ·{" "}
                   <Link
                     href={`/reports/daily/${latestReport.period_date}`}
-                    className="text-cyan-400/80 transition-colors hover:text-cyan-300"
+                    className="text-accent transition-opacity hover:opacity-80"
                   >
                     查看完整日报 →
                   </Link>
@@ -86,7 +113,7 @@ export default function HomePage() {
               </section>
             ) : (
               <article
-                className="prose prose-invert max-w-none prose-a:text-cyan-400 prose-a:no-underline hover:prose-a:underline"
+                className="prose prose-invert max-w-none prose-a:text-accent prose-a:no-underline hover:prose-a:underline"
                 dangerouslySetInnerHTML={{ __html: latestReport.html }}
               />
             )}
@@ -101,7 +128,7 @@ export default function HomePage() {
                 </h2>
                 <Link
                   href="/reports"
-                  className="text-xs text-zinc-500 transition-colors hover:text-cyan-400"
+                  className="text-xs text-zinc-500 transition-colors hover:text-accent"
                 >
                   查看归档 →
                 </Link>
