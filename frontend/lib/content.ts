@@ -22,15 +22,30 @@ function readJSON<T>(file: string, fallback: T): T {
   }
 }
 
-/** 全部报告元信息（已按 created_at 倒序）。可选按类型过滤。 */
+/** 报告列表（默认仅 pm 视角，避免归档/首页重复）。可选按类型过滤。 */
 export function getReports(type?: ReportType | string): ReportSummary[] {
   const all = readJSON<ReportSummary[]>("reports.json", []);
-  return type ? all.filter((r) => r.type === type) : all;
+  const pm = all.filter((r) => (r.lens ?? "pm") === "pm");
+  return type ? pm.filter((r) => r.type === type) : pm;
 }
 
-/** 单份报告全文。不存在返回 null。 */
-export function getReport(type: string, date: string): ReportDetail | null {
-  return readJSON<ReportDetail | null>(`report-${type}-${date}.json`, null);
+/** 单份报告全文（按视角）。pm 文件名不带后缀，向后兼容。 */
+export function getReport(
+  type: string,
+  date: string,
+  lens: string = "pm"
+): ReportDetail | null {
+  const suffix = lens === "pm" ? "" : `-${lens}`;
+  return readJSON<ReportDetail | null>(`report-${type}-${date}${suffix}.json`, null);
+}
+
+/** 某份报告（type+period）有哪些可用视角，pm 永远排首。 */
+export function getLensesFor(type: string, date: string): string[] {
+  const all = readJSON<ReportSummary[]>("reports.json", []);
+  const lenses = all
+    .filter((r) => r.type === type && r.period_date === date)
+    .map((r) => r.lens ?? "pm");
+  return [...new Set(lenses)].sort((a, b) => (a === "pm" ? -1 : b === "pm" ? 1 : a.localeCompare(b)));
 }
 
 /** 某类型最新一份报告。 */

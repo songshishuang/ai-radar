@@ -1,10 +1,11 @@
 import Link from "next/link";
 import EmptyState from "@/components/EmptyState";
+import ReportViewer from "@/components/ReportViewer";
 import { REPORT_TYPE_LABELS } from "@/lib/constants";
-import { getReport, getReports } from "@/lib/content";
+import { getLensesFor, getReport, getReports } from "@/lib/content";
 import { formatDateTime } from "@/lib/format";
 
-/** 静态导出：枚举全部报告，为每份生成一个静态页面 */
+/** 静态导出：枚举全部报告（按 pm 去重），每份一个详情页（含其全部视角） */
 export function generateStaticParams() {
   return getReports().map((r) => ({ type: r.type, date: r.period_date }));
 }
@@ -19,7 +20,11 @@ export default async function ReportDetailPage({
   const date = decodeURIComponent(rawDate);
   const typeLabel = REPORT_TYPE_LABELS[type] ?? "报告";
 
-  const report = getReport(type, date);
+  const lenses = getLensesFor(type, date);
+  const reports = lenses
+    .map((l) => getReport(type, date, l))
+    .filter((r): r is NonNullable<typeof r> => r !== null);
+  const report = reports[0] ?? null;
 
   return (
     <div>
@@ -55,10 +60,7 @@ export default async function ReportDetailPage({
               </span>
             </p>
           </header>
-          <article
-            className="prose prose-invert max-w-none prose-headings:tracking-tight prose-a:text-accent prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-accent/50 prose-blockquote:text-zinc-400 prose-strong:text-zinc-100 prose-hr:border-white/[0.08]"
-            dangerouslySetInnerHTML={{ __html: report.html }}
-          />
+          <ReportViewer reports={reports} />
         </>
       ) : (
         <EmptyState

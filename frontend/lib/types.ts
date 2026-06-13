@@ -6,6 +6,7 @@ export interface ReportSummary {
   id: number | string;
   type: string;
   period_date: string;
+  lens?: string; // 视角：pm（默认）/ engineer / investor / researcher
   title: string;
   created_at: string;
 }

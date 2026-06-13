@@ -59,11 +59,12 @@ class Enrichment(Base):
 
 class Report(Base):
     __tablename__ = "reports"
-    __table_args__ = (UniqueConstraint("type", "period_date"),)
+    __table_args__ = (UniqueConstraint("type", "period_date", "lens"),)
 
     id: Mapped[int] = mapped_column(primary_key=True)
     type: Mapped[str]  # daily | weekly | monthly
     period_date: Mapped[str]  # daily: 2026-06-12 / weekly: 2026-W24 / monthly: 2026-06
+    lens: Mapped[str] = mapped_column(default="pm")  # 视角：pm | engineer | investor | researcher
     title: Mapped[str]
     markdown: Mapped[str] = mapped_column(Text)
     html: Mapped[str] = mapped_column(Text)

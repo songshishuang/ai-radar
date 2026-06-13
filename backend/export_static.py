@@ -47,11 +47,15 @@ def export_reports(session) -> int:
     reports = session.execute(select(Report).order_by(Report.created_at.desc())).scalars().all()
     index = []
     for r in reports:
+        lens = getattr(r, "lens", "pm") or "pm"
+        # pm 文件名不带 lens（向后兼容），非 pm 带后缀
+        suffix = "" if lens == "pm" else f"-{lens}"
         index.append(
             {
                 "id": r.id,
                 "type": r.type,
                 "period_date": r.period_date,
+                "lens": lens,
                 "title": r.title,
                 "created_at": r.created_at.isoformat(),
             }
@@ -60,6 +64,7 @@ def export_reports(session) -> int:
             "id": r.id,
             "type": r.type,
             "period_date": r.period_date,
+            "lens": lens,
             "title": r.title,
             "markdown": _fix_links(r.markdown),
             "html": _fix_links(r.html),
@@ -67,7 +72,7 @@ def export_reports(session) -> int:
             "stats": r.stats or "{}",
             "created_at": r.created_at.isoformat(),
         }
-        (CONTENT_DIR / f"report-{r.type}-{r.period_date}.json").write_text(
+        (CONTENT_DIR / f"report-{r.type}-{r.period_date}{suffix}.json").write_text(
             json.dumps(detail, ensure_ascii=False), encoding="utf-8"
         )
     (CONTENT_DIR / "reports.json").write_text(json.dumps(index, ensure_ascii=False), encoding="utf-8")
