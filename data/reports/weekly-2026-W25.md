@@ -1,7 +1,7 @@
-# AI 情报月报 · 2026-06
+# AI 情报周报 · 2026-W25（06-08 ~ 06-15）
 
 
-## 🔴 本月重大事件时间线
+## 🔴 本周重大事件
 
 - 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
   Claude Code v2.1.170 发布 Claude Fable 5（Mythos 级别），是首个向开发者通用发布的 Mythos 级模型，能力超过历代通用版本。这是 Anthropic 模型体系的重大突破。 `模型发布` `推理突破`
@@ -23,12 +23,13 @@
   OpenAI 向美国 SEC 秘密提交 S-1 上市文件，但未确定具体上市时间表，标志公司上市进程正式启动，是行业重大商业事件。 `IPO` `融资`
 - 🔴 **[Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs](https://cursor.com/changelog/bugbot-updates-june-2026)** (8/10)
   Cursor 的 Bugbot 性能大幅升级：平均审查时间从 5 分钟降至 90 秒（快 3 倍），运营成本降低 22%，bug 检测能力提升 10%，显著提升了代码审查工具的实用价值。 `代码审查` `AI辅助开发`
+
+## 🏆 本周其他高分条目
+
 - 🔴 **[How Okara runs CMO agents for 120,000 companies on Vercel](https://vercel.com/blog/how-okara-runs-cmo-agents-for-120000-companies-on-vercel)** (8/10)
   Okara AI CMO 在 Vercel 日处理 40 亿 token，服务 12 万+ 企业，通过 8 个子 Agent 驱动多渠道营销自动化，验证 Agent 平台商业可行性。 `多Agent编排` `营销自动化` `规模应用`
 - 🔴 **[Claude Fable 5 now available on AI Gateway](https://vercel.com/changelog/claude-fable-5-now-available-on-ai-gateway)** (8/10)
   Anthropic 发布 Claude Fable 5（Mythos 级别），在长时间运行、多步推理和并行 Agent 执行上显著升级，支持多日自主工作。 `推理模型` `多步任务` `Agent能力`
-- 🔴 **[DeepSeek enters the fight for token volume, Anthropic continues to dominate spend](https://vercel.com/blog/ai-gateway-production-index-june-2026)** (8/10)
-  Vercel AI Gateway 最新数据显示，2026年5月全球 AI token 流量环比增长 20%，而 API 调用消费金额增长 43%，超越流量增速。数据反映 DeepSeek、Claude 等模型在生产应用中的竞争，Anthropic 继续在消费支出上领先。该月报告基于数十万亿 token 的真实生产数据。 `市场份额` `Token消费` `商业数据`
 - 🔴 **[Anthropic apologizes for invisible Claude Fable guardrails](https://www.theverge.com/ai-artificial-intelligence/948280/anthropic-claude-fable-invisible-distillation-guardrail)** (8/10)
   Anthropic 为其 Claude Fable 模型中存在的隐形防护栏（invisible distillation guardrails）致歉，引发关于 AI 模型安全机制透明度的广泛讨论。该事件突出了模型对齐和用户知情权之间的张力，强调在 AI 安全设计中需要更高的透明度和可解释性。 `模型安全` `透明度` `对齐`
 - 🔴 **[Kimi K2.7-Code: open-source coding model with better token efficiency](https://huggingface.co/moonshotai/Kimi-K2.7-Code)** (8/10)
@@ -43,8 +44,10 @@
   Anthropic 发布 Claude Fable 5 和 Claude Mythos 5 两款新模型。代表 Claude 系列在能力和性能上的新进展，拓展模型家族版本覆盖。 `模型发布` `能力升级` `推理模型`
 - 🔴 **[Statement on the US government directive to suspend access to Fable 5 and Mythos 5](https://www.anthropic.com/news/fable-mythos-access)** (8/10)
   Anthropic 发表官方声明，确认应美国政府指令，公司已暂停对 Fable 5 和 Mythos 5 两个模型的访问权限。声明强调合规立场，但未披露事件具体背景，恢复时间未定，可能涉及特定应用场景的政策限制。 `政策监管` `模型限制`
+- 🔴 **[Claude Fable 5 access suspended on AI Gateway](https://vercel.com/changelog/claude-fable-5-access-suspended-on-ai-gateway)** (8/10)
+  应美国政府指令，Vercel AI Gateway 已暂停所有用户对 Claude Fable 5 的访问权限，恢复时间未知。用户仍可通过 AI Gateway 正常访问其他 Anthropic 模型。此举标志着特定模型可能面临政策和监管限制，行业亟需关注相关政策动向。 `政策监管` `模型限制`
 
 ## 📊 管道状态
 
-- 本期收录 **278** 条（🧠 模型发布 17 条 · 📦 开源生态 19 条 · 💰 商业资本 31 条 · 🛡 政策安全 31 条 · 🛠 产研工具 51 条 · 🔬 前沿研究 23 条 · 🚀 产品动态 79 条 · 🔧 Agent 基建 27 条）
+- 本期收录 **262** 条（🧠 模型发布 17 条 · 📦 开源生态 19 条 · 💰 商业资本 30 条 · 🛡 政策安全 30 条 · 🛠 产研工具 47 条 · 🔬 前沿研究 17 条 · 🚀 产品动态 77 条 · 🔧 Agent 基建 25 条）
 - 降级/不可用源：Meta AI Blog、Mistral News、r/LocalLLaMA、r/MachineLearning、Ben's Bites

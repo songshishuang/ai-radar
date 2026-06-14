@@ -1,4 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · weekly 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · weekly 报告</description><item><title>AI 情报周报 · 2026-W24（06-08 ~ 06-14）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W24/</link><guid isPermaLink="false">weekly-2026-W24</guid><pubDate>Fri, 12 Jun 2026 16:52:05 -0000</pubDate><description># AI 情报周报 · 2026-W24（06-08 ~ 06-14）
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · weekly 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · weekly 报告</description><item><title>AI 情报周报 · 2026-W25（06-08 ~ 06-15）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W25/</link><guid isPermaLink="false">weekly-2026-W25</guid><pubDate>Sun, 14 Jun 2026 22:01:09 -0000</pubDate><description># AI 情报周报 · 2026-W25（06-08 ~ 06-15）
+
+
+## 🔴 本周重大事件
+
+- 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
+  Claude Code v2.1.170 发布 Claude Fable 5（Mythos 级别），是首个向开发者通用发布的 Mythos 级模型，能力超过历代通用版本。这是 Anthropic 模型体系的重大突破。 `模型发布` `推理突破`
+- 🔴 **[Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1)** (9/10)
+  DeepSeek-R1 推理模型的开源复现项目公布，开发者可在本地部署和优化该推理模型架构。 `推理模型` `开源复现`
+- 🔴 **[OpenAI mulls slashing prices as it competes with Anthropic for users](https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html)** (9/10)
+  OpenAI 考虑大幅降价以应对 Anthropic 激烈竞争，显示 AI 产品市场价格战升级。 `价格竞争` `市场动态`
+- 🔴 **[SpaceX, Anthropic, and OpenAI’s hot IPO summer](https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-</description></item><item><title>AI 情报周报 · 2026-W24（06-08 ~ 06-14）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W24/</link><guid isPermaLink="false">weekly-2026-W24</guid><pubDate>Fri, 12 Jun 2026 16:52:05 -0000</pubDate><description># AI 情报周报 · 2026-W24（06-08 ~ 06-14）
 
 
 ## 🔴 本周重大事件
