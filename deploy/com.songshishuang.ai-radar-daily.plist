@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.songshishuang.ai-radar-daily</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/songshishuang/project/report/publish.sh</string>
+    <string>--gen</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/songshishuang/project/report</string>
+
+  <!-- launchd 默认 PATH 极简，必须显式给出 claude / node / git 目录 -->
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/Users/songshishuang/.local/bin:/Users/songshishuang/.nvm/versions/node/v24.14.0/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    <key>HOME</key>
+    <string>/Users/songshishuang</string>
+    <key>SITE_BASE</key>
+    <string>https://songshishuang.github.io/ai-radar</string>
+  </dict>
+
+  <!-- 每天 08:00（本地时区 = 北京）。Mac 休眠时错过则唤醒后补跑一次 -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>8</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/ai-radar-daily.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/ai-radar-daily.err</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>

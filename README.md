@@ -95,3 +95,16 @@ docker compose up -d --build
 ## 源管理
 
 26 个首批源见 `backend/app/seeds.py`（核心厂商 8 / 产研范式 5 / 社区开源 6 / 行业媒体 5 / X 2）。单源连续失败 3 次自动降级并在日报「管道状态」节标注，不影响整体。
+
+## 每天自动发布（macOS launchd · 零 API 费）
+
+每天 8:00（本地时区）自动跑 `publish.sh --gen` 生成日报并上 Pages，用 claude CLI 订阅、不卡权限、不依赖 Claude app 开着（只要 Mac 开机/唤醒）：
+
+```bash
+cp deploy/com.songshishuang.ai-radar-daily.plist ~/Library/LaunchAgents/
+# plist 里的 PATH 需按本机调整（claude / node / git 的绝对目录）
+launchctl load ~/Library/LaunchAgents/com.songshishuang.ai-radar-daily.plist
+launchctl start com.songshishuang.ai-radar-daily   # 手动测一次，看 /tmp/ai-radar-daily.log
+```
+
+> 关键：launchd 默认 PATH 极简，plist 必须显式给出 `claude`/`node`/`git` 的绝对目录与 `HOME`，否则定时跑会因找不到命令而静默失败。
