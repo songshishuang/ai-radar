@@ -92,15 +92,13 @@ def items_for_daily(session: Session, now: datetime, period_date: str | None = N
 
 
 def items_for_weekly(session: Session, now: datetime) -> list:
-    local = now.astimezone(_tz())
-    monday = (local - timedelta(days=local.weekday())).replace(hour=0, minute=0, second=0, microsecond=0)
-    return scored_join(session, since=monday.astimezone(timezone.utc), until=now)
+    # 滚动最近 7 天：任何一天生成的周报都是完整一周（周一打开即含上周）
+    return scored_join(session, since=now - timedelta(days=7), until=now)
 
 
 def items_for_monthly(session: Session, now: datetime) -> list:
-    local = now.astimezone(_tz())
-    first = local.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-    return scored_join(session, since=first.astimezone(timezone.utc), until=now)
+    # 滚动最近 30 天：任何一天生成的月报都是完整一月（月初打开即含上月）
+    return scored_join(session, since=now - timedelta(days=30), until=now)
 
 
 def _degraded_sources(session: Session) -> list[str]:
@@ -290,8 +288,8 @@ def build_weekly(session: Session, week_str: str | None = None, provider: LLMPro
     scored = items_for_weekly(session, now)
     stats = _stats_for(scored, session)
     local = now.astimezone(_tz())
-    monday = (local - timedelta(days=local.weekday())).strftime("%m-%d")
-    week_range = f"{monday} ~ {local.strftime('%m-%d')}"
+    start = (local - timedelta(days=7)).strftime("%m-%d")
+    week_range = f"{start} ~ {local.strftime('%m-%d')}"
 
     trends: dict = {}
     if scored:

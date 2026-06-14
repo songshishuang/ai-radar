@@ -26,11 +26,11 @@
     <string>https://songshishuang.github.io/ai-radar</string>
   </dict>
 
-  <!-- 每天 08:00（本地时区 = 北京）。Mac 休眠时错过则唤醒后补跑一次 -->
+  <!-- 每天 06:00（本地时区 = 北京）。Mac 休眠时错过则唤醒后补跑一次 -->
   <key>StartCalendarInterval</key>
   <dict>
     <key>Hour</key>
-    <integer>8</integer>
+    <integer>6</integer>
     <key>Minute</key>
     <integer>0</integer>
   </dict>
