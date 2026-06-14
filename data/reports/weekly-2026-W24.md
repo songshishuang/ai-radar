@@ -1,10 +1,6 @@
 # AI 情报周报 · 2026-W24（06-08 ~ 06-14）
 
 
-## 🗞 本周大事记
-
-本周最重大事件是 Anthropic 发布 Mythos 级旗舰模型 Claude Fable 5，随即遭美国政府以安全漏洞为由强制全球下线，是 AI 史上迄今最重大的单次监管干预行动；幕后竞争角力浮出水面——亚马逊 CEO Andy Jassy 被指向政府官员传递安全顾虑，成为监管落锤的关键节点，科技巨头竞争与 AI 政策深度交织。与此同时行业进入 IPO 超级周期：SpaceX 完成历史最大规模 IPO，OpenAI 秘密提交 S-1，贝佐斯旗下 Prometheus 以「人工通用工程师」为定位完成 120 亿美元融资（估值 410 亿美元），Mistral 估值翻倍至 200 亿欧元。OpenAI 拟大幅降价应对 Anthropic 竞争，模型价格战进入新阶段。
-
 ## 🔴 本周重大事件
 
 - 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
@@ -27,18 +23,6 @@
   OpenAI 向美国 SEC 秘密提交 S-1 上市文件，但未确定具体上市时间表，标志公司上市进程正式启动，是行业重大商业事件。 `IPO` `融资`
 - 🔴 **[Bugbot is now over 3x faster, 22% cheaper, and finds 10% more bugs](https://cursor.com/changelog/bugbot-updates-june-2026)** (8/10)
   Cursor 的 Bugbot 性能大幅升级：平均审查时间从 5 分钟降至 90 秒（快 3 倍），运营成本降低 22%，bug 检测能力提升 10%，显著提升了代码审查工具的实用价值。 `代码审查` `AI辅助开发`
-
-## 📈 四维趋势综述
-
-### 📦 开源生态
-
-DeepSeek-R1 本地复现版本公布，开发者可自行部署推理架构，进一步拉低高质量推理能力门槛。Kimi K2.7 Code 以开源姿态切入编码赛道，Unsloth 发布 DiffusionGemma GGUF 量化版并获 17k+ 下载，量化与本地部署生态持续活跃。社区整理 20+ 主流 AI 编码工具系统提示词与内部工具信息，开源情报共享成为 Agent 从业者对标研究的新维度。
-
-## 🔭 下周关注
-
-- Anthropic Fable 5 / Mythos 5 解禁进展：政府与 Anthropic 的谈判走向及后续监管框架，将直接影响全球 Claude 用户产品连续性，并为整个行业的「安全漏洞触发下架」监管先例定调
-- OpenAI 降价落地与 IPO 时间表：降价若正式宣布将触发全行业模型定价重构，需关注 Anthropic、Google 是否跟进；S-1 细节披露后市场对 AI 公司盈利模型的定价逻辑值得重点研判
-- Amazon-Anthropic 竞争关系走向：Jassy 借监管打击竞争对手事件曝光后，亚马逊作为 Anthropic 最大投资方兼竞争对手的双重关系如何演化，是否推动 Anthropic 加速多云或自主云布局
 
 ## 🏆 本周其他高分条目
 

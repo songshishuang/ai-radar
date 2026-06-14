@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · monthly 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · monthly 报告</description><item><title>AI 情报月报 · 2026-06</title><link>https://songshishuang.github.io/ai-radar/reports/monthly/2026-06/</link><guid isPermaLink="false">monthly-2026-06</guid><pubDate>Sun, 14 Jun 2026 03:25:30 -0000</pubDate><description># AI 情报月报 · 2026-06
 
 
-## 🗞 本月综述
-
-本周最重大事件是 Anthropic 发布 Mythos 级旗舰模型 Claude Fable 5，但随即因亚马逊 CEO Jassy 向美国政府提出安全顾虑、白宫发出出口管制指令，导致 Fable 5 与 Mythos 5 对境外用户全面断网，成为史上最快从发布到被政府叫停的顶级 AI 模型事件。资本层面，SpaceX 完成全球最大规模 IPO（马斯克跻身全球首位万亿富豪）、OpenAI 秘密提交 S-1、Anthropic 筹备上市，AI 科技股集团 MANGOS 雏形已现。价格战同步升级，OpenAI 考虑大幅降价应对 Anthropic 竞争压力，Mistral 完成 30 亿欧元融资估值翻倍，Bezos 的 Prometheus 以 410 亿估值锚定「人工通用工程师」赛道。企业侧，BBVA 将 ChatGPT Enterprise 铺至 10 万员工，DXC 将 Claude 接入金融航空核心系统，企业 AI 从试点进入规模化交付阶段。
-
 ## 🔴 本月重大事件时间线
 
 - 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
   Claude Code v2.1.170 发布 Claude Fable 5（Mythos 级别），是首个向开发者通用发布的 Mythos 级模型，能力超过历代通用版本。这是 Anthropic 模型体系的重大突破。 `模型发布` `推理突破`
 - 🔴 **[Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1)** (9/10)
-  DeepSeek-R</description></item></channel></rss>
+  DeepSeek-R1 推理模型的开源复现项目公布，开发者可在本地部署和优化该推理模型架构。 `推理模型` `开源复现`
+- 🔴 **[OpenAI mulls slashing prices as it competes with Anthropic for users](https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html)** (9/10)
+  OpenAI 考虑大幅降价以应对 Anthropic 激烈竞争，显示 AI 产品市场价格战升级。 `价格竞争` `市场动态`
+- 🔴 **[SpaceX, Anthropic, and OpenAI’s hot IPO summer](https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer)** (9/</description></item></channel></rss>

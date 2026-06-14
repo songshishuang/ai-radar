@@ -1,10 +1,6 @@
 # AI 情报月报 · 2026-06
 
 
-## 🗞 本月综述
-
-本周最重大事件是 Anthropic 发布 Mythos 级旗舰模型 Claude Fable 5，但随即因亚马逊 CEO Jassy 向美国政府提出安全顾虑、白宫发出出口管制指令，导致 Fable 5 与 Mythos 5 对境外用户全面断网，成为史上最快从发布到被政府叫停的顶级 AI 模型事件。资本层面，SpaceX 完成全球最大规模 IPO（马斯克跻身全球首位万亿富豪）、OpenAI 秘密提交 S-1、Anthropic 筹备上市，AI 科技股集团 MANGOS 雏形已现。价格战同步升级，OpenAI 考虑大幅降价应对 Anthropic 竞争压力，Mistral 完成 30 亿欧元融资估值翻倍，Bezos 的 Prometheus 以 410 亿估值锚定「人工通用工程师」赛道。企业侧，BBVA 将 ChatGPT Enterprise 铺至 10 万员工，DXC 将 Claude 接入金融航空核心系统，企业 AI 从试点进入规模化交付阶段。
-
 ## 🔴 本月重大事件时间线
 
 - 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
@@ -47,18 +43,6 @@
   Anthropic 发布 Claude Fable 5 和 Claude Mythos 5 两款新模型。代表 Claude 系列在能力和性能上的新进展，拓展模型家族版本覆盖。 `模型发布` `能力升级` `推理模型`
 - 🔴 **[Statement on the US government directive to suspend access to Fable 5 and Mythos 5](https://www.anthropic.com/news/fable-mythos-access)** (8/10)
   Anthropic 发表官方声明，确认应美国政府指令，公司已暂停对 Fable 5 和 Mythos 5 两个模型的访问权限。声明强调合规立场，但未披露事件具体背景，恢复时间未定，可能涉及特定应用场景的政策限制。 `政策监管` `模型限制`
-
-## 📈 月度趋势研判
-
-### 📦 开源生态
-
-DeepSeek-R1 推理架构开源复现落地，开发者可本地部署并优化，进一步压低顶级推理能力的获取成本，对商业闭源模型定价构成持续压制。Kimi K2.7-Code 以 token 效率优化切入编码赛道，上线 Vercel AI Gateway 支持长上下文编程任务，成为 Cursor/Copilot 生态内性价比竞品。DiffusionGemma GGUF 量化版获 17k+ 下载验证部署需求，社区同步开源汇总 20+ 主流编码 Agent 系统提示词，为 Agent 产品逆向研究提供公开素材库。开源 Agent 框架 addyosmani 生产级技能库与 obra Superpowers 框架双双开源，Agent 开发方法论沉淀进入社区化阶段。
-
-## 🔭 下月关注方向
-
-- Anthropic Fable 5 / Mythos 5 能否解禁及恢复时间线：政府与 Anthropic 的立场分歧（单漏洞是否足以召回商用模型）将决定监管干预的「触发阈值」，直接影响所有依赖 Claude 最强模型的产品的业务连续性规划
-- OpenAI 降价动作落地与否：若 OpenAI 启动大幅降价，将倒逼整个 API 市场重新定价，产研团队应关注是否出现套利时间窗口，同时评估对现有 Anthropic 绑定成本结构的影响
-- Prometheus「人工通用工程师」产品方向披露：Bezos 以 410 亿估值押注物理世界 AI 工程化，若产品路线图公开，将直接指向制造业/药物设计赛道的下一个平台级机会
 
 ## 📊 管道状态
 
