@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-13 · 研发视角</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-13/</link><guid isPermaLink="false">daily-2026-06-13</guid><pubDate>Sat, 13 Jun 2026 11:42:16 -0000</pubDate><description># AI 情报日报 · 2026-06-13 · 研发视角
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-14</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-14/</link><guid isPermaLink="false">daily-2026-06-14</guid><pubDate>Sat, 13 Jun 2026 23:04:31 -0000</pubDate><description># AI 情报日报 · 2026-06-14
+
+_☕ 正文 2 分钟读完 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+Anthropic模型安全漏洞触发美国出口管制，AI安全监管升级为政策行动。美国警察涉嫌伪造AI证据、KPMG报告因幻觉被撤回，暴露司法与应用领域的可靠性风险。Meta被迫撤销Manus收购案反映地缘政治对AI竞争格局的深刻影响。
+
+## 🔥 今日必读
+
+**1. [亚马逊安全研究引发白宫出口管制，Anthropic双模型被迫断服](https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban)** `9/10` · The Verge AI
+⚡ 竞争对手的安全研究可直接成为政府监管触发器，AI产品的合规风险已从技术问题升级为生死线
+👉 本周内梳理团队正在使用或集成的AI模型的安全防护现状，输出一份提示词注入风险自查清单，识别最高优先级漏洞
+
+**2. [Amazon CEO游说美国官员，Anthropic遭监管打压](https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578)** `8/10` · Hacker News AI
+⚡ 科技巨头将监管博弈纳入AI竞争工具箱，依赖单一模型供应商的产品面临供应链断供风险。
+👉 本周排查自有产品对Anthropic Claude的依赖深度，输出「断供影响评估报告」并同步给技术负责人
+
+**3. [亚马逊CEO向美官员施压，Anthropic模型遭政府打压](https://www.wsj.com/tec</description></item><item><title>AI 情报日报 · 2026-06-13 · 研发视角</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-13/</link><guid isPermaLink="false">daily-2026-06-13</guid><pubDate>Sat, 13 Jun 2026 11:42:16 -0000</pubDate><description># AI 情报日报 · 2026-06-13 · 研发视角
 
 _☕ 正文约 2 分钟读完 · 数据同源（今日 150 条）· engineer 加权_
 
