@@ -1,15 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · weekly 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · weekly 报告</description><item><title>AI 情报周报 · 2026-W25（06-08 ~ 06-15）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W25/</link><guid isPermaLink="false">weekly-2026-W25</guid><pubDate>Sun, 14 Jun 2026 22:01:09 -0000</pubDate><description># AI 情报周报 · 2026-W25（06-08 ~ 06-15）
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · weekly 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · weekly 报告</description><item><title>AI 情报周报 · 2026-W25（06-15 ~ 06-15）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W25/</link><guid isPermaLink="false">weekly-2026-W25</guid><pubDate>Sun, 14 Jun 2026 22:01:09 -0000</pubDate><description># AI 情报周报 · 2026-W25（06-15 ~ 06-15）
 
 
-## 🔴 本周重大事件
+## 🗞 本周大事记
 
-- 🔴 **[v2.1.170](https://github.com/anthropics/claude-code/releases/tag/v2.1.170)** (10/10)
-  Claude Code v2.1.170 发布 Claude Fable 5（Mythos 级别），是首个向开发者通用发布的 Mythos 级模型，能力超过历代通用版本。这是 Anthropic 模型体系的重大突破。 `模型发布` `推理突破`
-- 🔴 **[Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1)** (9/10)
-  DeepSeek-R1 推理模型的开源复现项目公布，开发者可在本地部署和优化该推理模型架构。 `推理模型` `开源复现`
-- 🔴 **[OpenAI mulls slashing prices as it competes with Anthropic for users](https://www.cnbc.com/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html)** (9/10)
-  OpenAI 考虑大幅降价以应对 Anthropic 激烈竞争，显示 AI 产品市场价格战升级。 `价格竞争` `市场动态`
-- 🔴 **[SpaceX, Anthropic, and OpenAI’s hot IPO summer](https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-</description></item><item><title>AI 情报周报 · 2026-W24（06-08 ~ 06-14）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W24/</link><guid isPermaLink="false">weekly-2026-W24</guid><pubDate>Fri, 12 Jun 2026 16:52:05 -0000</pubDate><description># AI 情报周报 · 2026-W24（06-08 ~ 06-14）
+本周 AI 行业动向以基础设施优化和开发工具迭代为主，节奏相对平稳。Vercel 将 Hobby 用户 Blob 存储上限从 5 个大幅提升至 100 个，显著降低独立开发者在 AI 应用数据管理上的门槛。Kage 工具登上 Hacker News 热榜，实现将任意网站打包为单一离线二进制文件，为本地化工具分发提供新思路。Linux 平台持续获得 AI 相关工具的版本支持，底层基础设施生态稳步完善。
+
+## 📈 四维趋势综述
+
+### 📦 开源生态
+
+本周开源热点集中在工具层基础能力：Kage 以零依赖单文件形态发布，契合开源工具「易分发、低摩擦」的设计原则。Linux 平台的持续迭代表明 AI 工具链的原生 Linux 支持仍是社区重要方向，基础运行时生态持续巩固。
+
+## 🔭 下周关注
+
+- 其他云平台（AWS Amplify、Cloudflare R2 等）是否跟进提升免费层 AI 数据存储配额，观察 PLG 战略在开发者工具赛道的扩散节奏
+- 离线/本地化 AI 工具打包分发模式（Kage 路线）的生态发展，关注主流 AI 推理工具是否采用类似单二进制分发降低部署复杂度
+- Linux 平台主流 AI 推理框架（vLLM、Ollama、llama.cpp）新版本适配动态，跟踪硬件兼容性与性能优化方向
+
+## 🏆 本周其他高分条目
+
+- ⚪ **[Increased Blob store limit for Hobby users](https://vercel.com/changelog/increased-blob-store-limit-for-hobby-users)** (4/10)
+  Vercel 宣布提升 Hobby 用户的 Blob 存储限制，从原来的</description></item><item><title>AI 情报周报 · 2026-W24（06-08 ~ 06-14）</title><link>https://songshishuang.github.io/ai-radar/reports/weekly/2026-W24/</link><guid isPermaLink="false">weekly-2026-W24</guid><pubDate>Fri, 12 Jun 2026 16:52:05 -0000</pubDate><description># AI 情报周报 · 2026-W24（06-08 ~ 06-14）
 
 
 ## 🔴 本周重大事件

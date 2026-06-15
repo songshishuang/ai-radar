@@ -2,24 +2,39 @@
 
 _☕ 正文 2 分钟读完 · 深度解读见文末附录_
 
-## 🔥 今日高分条目
+## ⚡ 今日速览
 
-- 🔴 **[As AI companies race to go public, who else is along for the ride?](https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride)** (8/10)
-  TechCrunch 报道多家 AI 公司竞相上市融资，创业企业效仿 SpaceX IPO 热潮启动 IPO 计划，反映 AI 产业进入快速商业化和资本化阶段，融资和上市成为行业重点，是产业商业转向的重要信号 `IPO` `融资` `商业化`
-- 🔴 **[China may have accessed Mythos](https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos)** (8/10)
-  美国白宫对Anthropic的Mythos模型实施出口限制，理由之一是担心该模型被与中国有关联的组织访问和获取，构成国家安全威胁。 `出口管制` `国家安全` `模型保护`
-- 🟠 **[shiyu-coder/Kronos: Kronos: A Foundation Model for the Language of Financial Markets](https://github.com/shiyu-coder/Kronos)** (6/10)
-  Kronos是专为金融市场语言优化的开源基础模型，在GitHub Trending获得关注。针对金融文本、</description></item><item><title>AI 情报日报 · 2026-06-14</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-14/</link><guid isPermaLink="false">daily-2026-06-14</guid><pubDate>Sat, 13 Jun 2026 23:04:31 -0000</pubDate><description># AI 情报日报 · 2026-06-14
+AI 融资上市热潮加速，多家创业企业竞相启动 IPO 计划，产业进入快速商业化和资本化阶段。白宫对 Anthropic 模型出口管制反映地缘政治风险加剧，监管与安全成为 AI 发展新约束。开源生态在金融、视频处理等领域展现实际应用价值，但虚假产品和市场炒作并存，产业宣传与实际应用的落差值得警惕。
 
-_☕ 正文 2 分钟读完 · 深度解读见文末附录_
+（共 108 字，3 句话）
 
-## 🔥 今日高分条目
+## 🔥 今日必读
 
-- 🔴 **[Amazon security research reportedly led to the White House’s Anthropic Fable ban](https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban)** (9/10)
-  亚马逊安全研究发现Anthropic的Fable 5模型存在安全漏洞，可被利用获取敏感信息。美国白宫据此发布出口管制指令，禁止Fable 5和Mythos 5模型访问，促使Anthropic切断产品服务。此事反映AI安全监管从研究走向实际行动、政府监管权力升级的趋势。 `模型监管` `安全漏洞` `出口管制`
-- 🔴 **[Amazon CEO's Talks with U.S. Officials Triggered Crackdown on Anthropic Models](https://www.wsj.com/tech/ai/amazon-ceos-talks-with-u-s-officials-triggered-crackdown-on-anthropic-models-dcc90578)** (8/10)
-  Amazon CEO与美国官员的谈话引发了对Anthropic模型的监管打击。这一事件反映了大型科技公司在AI领域的竞争加剧，可能涉及Amazon推动监管机构对其竞争对手Anthropic采取行动。此举表明AI安全、监管和企业竞争关系正在成为政府重点关注的领域。 `企业竞争` `监管压力` `AI政策`
-- 🔴 **[Ama</description></item><item><title>AI 情报日报 · 2026-06-13 · 研发视角</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-13/</link><guid isPermaLink="false">daily-2026-06-13</guid><pubDate>Sat, 13 Jun 2026 11:42:16 -0000</pubDate><description># AI 情报日报 · 2026-06-13 · 研发视角
+**1. [AI公司集体冲刺IPO，商业化速度成核心竞争力](https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride)** `8/10` · TechCrunch AI
+⚡ AI行业从技术投入期进入资本收割期，产品能否快速跑出清晰营收模型决定生死
+👉 本周选2家即将IPO的AI公司（如Anthropic、Perplexity），拆解其官网定价页与公开客户案例，提炼其付费转化漏斗设计逻辑，对比自身产品找差距
+
+**2. [白宫限制Anthropic顶级模型出口：中国或已获取Mythos引发安全警报](https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos)** `8/10` · The Verge AI
+⚡ 顶尖AI模型正成为新型战略资产，出口管制时代来临，中国AI产品的海外合规风险骤升
+👉 本周梳理自身产品所调用的全部AI模型来源清单，标注哪些属于受美国出口管制约束的服务，评估替换优先级
+
+## 📌 值得关注
+
+- **[shiyu-c</description></item><item><title>AI 情报日报 · 2026-06-14</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-14/</link><guid isPermaLink="false">daily-2026-06-14</guid><pubDate>Sat, 13 Jun 2026 23:04:31 -0000</pubDate><description># AI 情报日报 · 2026-06-14
+
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+监管禁 Anthropic 的瓜揭盖——**亚马逊安全研究 + Amazon CEO 游说白宫**促成对 Claude Fable/Mythos 的封禁，「竞争对手能推动监管」成供应商风险新维度；OpenAI 同日吃**州检察长调查** + 推 **Partner Network**，头部厂商监管压力普遍化；**MCP 生态单日爆发**（awesome-mcp-servers 20+ 新 server），工具集成范式加速成熟；KPMG 因 **AI 幻觉撤回报告**，企业用 AI 的可信度翻车再添一例。
+
+## 🔥 今日必读
+
+**1. [监管禁 Anthropic 背后：亚马逊安全研究 + Amazon CEO 游说白宫](https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban)** `9/10` · HN 781 / TechCrunch / WSJ / The Verge · `Anthropic` `监管` `Amazon`
+⚡ 供应商风险升级到新维度——**竞争对手能用安全研究+游说推动监管封禁**你依赖的模型，不只是技术或合规问题。
+👉 把「模型供应商的竞争关系」纳入选型风险评估；对关键链路确保有跨厂商热切换能力，别被单一厂商的政治风险绑死。
+
+**2. [OpenAI 遭多州检察长调查 + 推出 Partner Network](https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-at</description></item><item><title>AI 情报日报 · 2026-06-13 · 研发视角</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-13/</link><guid isPermaLink="false">daily-2026-06-13</guid><pubDate>Sat, 13 Jun 2026 11:42:16 -0000</pubDate><description># AI 情报日报 · 2026-06-13 · 研发视角
 
 _☕ 正文约 2 分钟读完 · 数据同源（今日 150 条）· engineer 加权_
 
