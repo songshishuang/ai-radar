@@ -76,16 +76,24 @@ def scored_join(session: Session, since: datetime | None = None, until: datetime
             continue
         out.append((item, enr, source_name))
     out.sort(key=lambda r: r[1].importance_score, reverse=True)
-    return out
+    # 标题级去重：同一事件多源转载 / 同源带不同追踪参数旧重复，按规范化标题合并，保留最高分（已降序→首现即最高）
+    seen_titles: set[str] = set()
+    deduped = []
+    for item, enr, source_name in out:
+        key = re.sub(r"\s+", "", (item.title or "").lower())
+        if key and key in seen_titles:
+            continue
+        seen_titles.add(key)
+        deduped.append((item, enr, source_name))
+    return deduped
 
 
 def items_for_daily(session: Session, now: datetime, period_date: str | None = None) -> list:
-    """窗口=自上一份『更早 period』日报的生成时刻起；重建当日报告时排除自身，否则窗口归零。"""
-    q = select(Report).where(Report.type == "daily")
-    if period_date:
-        q = q.where(Report.period_date < period_date)
-    last = session.execute(q.order_by(Report.period_date.desc()).limit(1)).scalar_one_or_none()
-    since = last.created_at if last else now - timedelta(hours=36)
+    """滚动最近 36h（与 ai-radar fetch --since 36h 一致），不依赖上份日报生成时刻。
+    旧逻辑用『上份日报 created_at』作 since + scored_join 按 published_at 过滤，会把
+    『发布于昨天白天、今早才抓到』的条目全部排除（同日多次重建时窗口更几乎归零），
+    导致条目骤减 → 深度分析降级。滚动窗口让每次跑都覆盖最近 36h 发布的全部资讯。"""
+    since = now - timedelta(hours=36)
     if since.tzinfo is None:
         since = since.replace(tzinfo=timezone.utc)
     return scored_join(session, since=since, until=now)

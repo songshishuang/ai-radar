@@ -40,7 +40,13 @@ class ClaudeCLIProvider:
             raise LLMError(f"claude CLI timeout: {e}") from e
         if r.returncode != 0:
             raise LLMError(f"claude CLI exit {r.returncode}: {r.stderr[:500]}")
-        return r.stdout.strip()
+        out = r.stdout.strip()
+        # claude 未登录/凭证失效时仍返回 exit 0 + 提示文本（如 launchd 无头环境读不到 keychain），
+        # 必须识别为失败，否则 "Not logged in" 被当作 LLM 输出 → 下游 JSON 解析炸成 failed_batches。
+        low = out.lower()
+        if not out or "not logged in" in low or "please run /login" in low or "invalid api key" in low:
+            raise LLMError(f"claude CLI 未认证或空输出: {out[:160]!r}")
+        return out
 
 
 class AnthropicAPIProvider:

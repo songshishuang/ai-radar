@@ -10,7 +10,11 @@ from sqlalchemy.orm import Session
 from app.fetchers import FETCHERS, RawItem
 from app.models import Item, PipelineRun, Source, utcnow
 
-TRACKING_PARAMS = {"utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content", "ref", "fbclid", "gclid"}
+TRACKING_PARAMS = {
+    "utm_source", "utm_medium", "utm_campaign", "utm_term", "utm_content",
+    "ref", "fbclid", "gclid", "mc_cid", "mc_eid",
+    "st", "reflink", "spm", "cmpid", "cmp", "share", "src", "ncid", "guccounter",  # WSJ/媒体常见分享/追踪参数
+}
 FAIL_THRESHOLD = 3
 
 
