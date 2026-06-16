@@ -1,4 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-15</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-15/</link><guid isPermaLink="false">daily-2026-06-15</guid><pubDate>Sun, 14 Jun 2026 22:01:07 -0000</pubDate><description># AI 情报日报 · 2026-06-15
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-16</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-16/</link><guid isPermaLink="false">daily-2026-06-16</guid><pubDate>Mon, 15 Jun 2026 23:06:38 -0000</pubDate><description># AI 情报日报 · 2026-06-16
+
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+Anthropic 禁令反转发酵——TechCrunch 揭「禁令从来不是因为越狱漏洞」、安全专家联名抗议「危险」，The Verge 深扒 Mythos 5 与政府出口管制之争，供应商政治风险持续且监管可能反复；HN 735 分热议「用本地模型替代 Claude/GPT 做日常编码」，叠加 Claude SDK 接入 Apple 端侧模型，闭源动荡下本地化/端侧推理升温；Salesforce 36 亿美元收购 AI 客服 Fin、AI agent「身份治理」获 6600 万融资，AI 商业化与 agent 基建双线推进。
+
+## 🔥 今日必读
+
+**1. [Anthropic 禁令反转：真相非越狱漏洞 + 安全界联名抗议](https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/)** `9/10` · TechCrunch×2 / The Verge / HN 193 · `Anthropic` `监管` `出口管制`
+⚡ 昨天的禁令今天反转发酵——官方理由「越狱漏洞」被揭非真实原因，安全专家集体抗议禁令「危险」，[Mythos 5 之争](https://www.theverge.com/ai-artificial-intelligence/950412/anthropic-trump-adminstration-claude-mythos-fable-5-export-controls)直指出口管制政治博弈。监管不是一锤定音，会因行业反弹反复。
+👉 别因「已禁」就仓促弃用或锁</description></item><item><title>AI 情报日报 · 2026-06-15</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-15/</link><guid isPermaLink="false">daily-2026-06-15</guid><pubDate>Sun, 14 Jun 2026 22:01:07 -0000</pubDate><description># AI 情报日报 · 2026-06-15
 
 _☕ 正文 2 分钟读完 · 深度解读见文末附录_
 
