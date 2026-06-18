@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-17</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-17/</link><guid isPermaLink="false">daily-2026-06-17</guid><pubDate>Wed, 17 Jun 2026 13:10:35 -0000</pubDate><description># AI 情报日报 · 2026-06-17
 
-_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日刷新版_
 
 ## ⚡ 今日速览
 
-GLM-5.2 登顶 Artificial Analysis **开源权重模型榜**（主打长任务），开源选型与抗监管备选再加强；一份 web 趋势调查显示 **60% 美国消费者反感**品牌营销里的「AI」字样——「AI-powered」正从卖点变减分项；Vercel 一口气**开源 agent 框架 eve** + 发布 Agent Stack，大厂入场 agent 基建；Anthropic 与特朗普政府的禁令风波，销售数据显示**反而助其增长**。
+**OpenAI 泄露财务文件显示年亏数十亿美元**，头部闭源厂商的商业可持续性与涨价压力浮上台面；GLM-5.2 登顶 Artificial Analysis **开源权重模型榜**，开源抗监管备选再加强；一份调查显示 **60% 美国消费者反感**营销里的「AI」字样，「AI-powered」从卖点变减分；Anthropic 一边**开首尔办公室扩张**、一边禁令风波销售反增，Vercel 开源 agent 框架 eve。
 
 ## 🔥 今日必读
 
-**1. [GLM-5.2 登顶 Artificial Analysis 开源权重模型榜](https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index)** `9/10` · Artificial Analysis / [HF 官方博客](https://huggingface.co/blog/zai-org/glm-52-blog) / HN 312 · `GLM` `开源模型` `长任务`
-⚡ 智谱 GLM-5.2 成为开源权重第一，主打 long-horizon 长任务——在闭源受监管动荡时，开源旗舰的「可自部署 + 抗监管」价值再上一台阶。
-👉 把 GLM-5.2 正式纳入选型对照，在 1 个长链路/Agent 场景实测它 vs 现用闭源；它是你「闭源不可用」预案里最强的开源备选。
+**1. [泄露财务文件显示 OpenAI 年亏数十亿美元](https://arstechnica.com/ai/2026/06/leaked-financial-docs-show-openai-is-losing-billions-of-dollars-a-year/)** `9/10` · Ars Technica / HN 353 · `OpenAI` `商业` `可持续性`
+⚡ 头部闭源厂商烧钱真相摆上台面——巨额亏损意味着**未来涨价、调整免费额度、收紧 API 条款**的压力，直接影响你的长期成本结构。
+👉 把「主力供应商涨价 30-50%」纳入成本敏感性测算；对高频调用链路预备「降级到更便宜模型/开源」的路径，别被未来提价打穿毛利。
 
-**2. [调查：60% 美国消费者反感品牌营销里的「AI」字样](htt</description></item><item><title>AI 情报日报 · 2026-06-16</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-16/</link><guid isPermaLink="false">daily-2026-06-16</guid><pubDate>Mon, 15 Jun 2026 23:06:38 -0000</pubDate><description># AI 情报日报 · 2026-06-16
+**2. [GLM-5.2 登顶 Artificial Analysis 开源权重模型榜](https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intel</description></item><item><title>AI 情报日报 · 2026-06-16</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-16/</link><guid isPermaLink="false">daily-2026-06-16</guid><pubDate>Mon, 15 Jun 2026 23:06:38 -0000</pubDate><description># AI 情报日报 · 2026-06-16
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
