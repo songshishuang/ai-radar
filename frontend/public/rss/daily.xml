@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-17</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-17/</link><guid isPermaLink="false">daily-2026-06-17</guid><pubDate>Wed, 17 Jun 2026 13:10:35 -0000</pubDate><description># AI 情报日报 · 2026-06-17
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
+
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+周一资讯偏少但主线清晰：**三星给全体员工部署 ChatGPT + Codex**，企业级 AI 采用再添重磅标杆；**Claude 上线身份验证**（HN 675 热议），AI 平台合规化提速；主权 AI 开源模型 **Apertus** 登场、「切换开源几乎无代价」成开发者共识，开源迁移逻辑在 OpenAI 巨亏后继续强化；「即使能跑也拒绝 AI 代码」的讨论把 AI 编码的质量与可维护性摆上台面。
+
+## 🔥 今日必读
+
+**1. [三星电子给全体员工部署 ChatGPT + Codex](https://openai.com/index/samsung-electronics-chatgpt-codex-deployment)** `8/10` · OpenAI 官方 · `企业采用` `Codex` `落地`
+⚡ 又一家巨头把 AI 工具铺到全员——「企业级 AI 采用」从试点走向规模化标配，验证了组织级付费意愿与 Codex 在大厂的落地。
+👉 参考其「全员铺开 + 编码助手（Codex）打头阵」的路径，给自家团队的 AI 工具采用排出「先编码/客服等高 ROI 场景、再全员」的节奏。
+
+**2. [Claude 上线身份验证](https://support.claude.com/en/articles/14328960-identity-verification-on-claude)** `8/10` · Anthropic 官方 / HN 675 · `合规` `身份验证` `平台`
+⚡ AI 平台开始要求身份验证（KYC 化）——在监管收紧大背景下，平台合规门槛上升，可能影响 API 接入与账号策略。
+👉 若你产品依</description></item><item><title>AI 情报日报 · 2026-06-19</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-19/</link><guid isPermaLink="false">daily-2026-06-19</guid><pubDate>Thu, 18 Jun 2026 23:09:01 -0000</pubDate><description># AI 情报日报 · 2026-06-19
+
+_☕ 正文 2 分钟读完 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+OpenAI年亏数十亿美元，IPO前挖角谷歌AI领袖，融资压力与人才竞争加剧。GitHub万级仓库特洛伊木马与ChatGPT图像生成漏洞暴露供应链和内容安全缺口。AWS自研芯片挑战Nvidia垄断，Agent框架标准化加速，具身AI融资创新高。
+
+## 🔥 今日必读
+
+**1. [万库木马：GitHub供应链安全大规模沦陷事件解读](https://orchidfiles.com/github-repositories-distributing-malware)** `9/10` · Hacker News AI
+⚡ 开源依赖已成最高风险攻击面，不做依赖安全准入的产品团队随时踩雷
+👉 本周内排查产品所有第三方依赖，用Snyk或Socket.dev跑一次全量扫描，输出高危依赖清单并同步给研发负责人
+
+**2. [AWS向第三方数据中心售芯片，直接叫板Nvidia加速器霸主地位](https://techcrunch.com/2026/06/18/amazon-hopes-to-challenge-nvidia-more-directly-by-selling-its-ai-chips)** `9/10` · TechCrunch AI
+⚡ 算力供给侧多元化窗口开启，AI基础设施采购决策逻辑将重构，PM需重新评估技术选型成本
+👉 联系公司基础设施/云架构团队，将AWS Inferentia2/Trainium2纳入下一季度AI推理成本评估范围，输出与当前GPU方案的TCO对比报告
+
+**3. [Midjourney 发布超声全身扫描仪，AI图像公司跨界医疗硬件](https://www.theverge.com/ai-artificial-intellig</description></item><item><title>AI 情报日报 · 2026-06-17</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-17/</link><guid isPermaLink="false">daily-2026-06-17</guid><pubDate>Wed, 17 Jun 2026 13:10:35 -0000</pubDate><description># AI 情报日报 · 2026-06-17
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日刷新版_
 
