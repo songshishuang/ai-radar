@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-23</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
 
-_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日刷新版_
 
 ## ⚡ 今日速览
 
-**开源 vs 闭源的天平在加速倾斜**——「切换开源几乎无代价」(HN 381)、「GLM-5.2 对比 Opus」(HN 485)、主权模型 Apertus(HN 520) 同日三连高热，接续 OpenAI 巨亏，开源迁移从「备选」变「主流讨论」；OpenAI 推 **Daybreak 安全计划**（找+修开源 bug），业务边界扩张到安全；Codex 曝日志 bug 写满 SSD(HN 469)，AI 工具可靠性敲警钟；Groq 融资 6.5 亿、DeepMind 7500 万押注好莱坞，资本继续涌动。
+**开源 vs 闭源天平加速倾斜**（HN 三连高热 381/485/520）继续主导；**Anthropic 推出 Claude Tag**——在 Slack 里 @Claude 就能派活的团队 agent，AI 正式进入协作流；**Google Cloud 扩展 Confidential Computing**（可验证私密 AI）、OpenAI 双线推 Daybreak 安全计划 + AI 共享标准；Codex 曝日志 bug 写满 SSD(HN 469) 敲可靠性警钟。
 
 ## 🔥 今日必读
 
-**1. [开源迁移共识强化：「切换开源几乎无代价」](https://www.marble.onl/posts/cancel_claude.html)** `9/10` · HN 381 / 485 / 520 三连高热 · `开源` `选型` `迁移`
-⚡ 三条同日爆款拼出强信号——[切换开源无代价](https://www.marble.onl/posts/cancel_claude.html)(HN 381 飙升)、[GLM-5.2 vs Opus](https://news.ycombinator.com/)(HN 485)、[Apertus 主权模型](https://apertvs.ai/)(HN 520)，接续 OpenAI 巨亏，**开源迁移从纸面预案变成社区主流议题**。
-👉 上周说的「主力链路小流量实跑开源」别再拖了——这周就挑 1 条非核心链路实测 GLM-5.2/开源，把迁移成本摸清，赶在闭源涨价前备好牌。
+**1. [开源迁移共识强化：「切换开源几乎无代价」](https://www.marble.onl/posts/cancel_claude.html)** `9/10` · HN 381/485/520 三连 · `开源` `选型`
+⚡ 三条同日爆款拼出强信号——切换无代价(381 飙升)+[GLM-5.2 vs Opus](https://news.ycombinator.com/)(485)+[Apertus 主权模型](https://apertvs.ai/)(520)，接续 OpenAI 巨亏，**开源迁移从纸面预案变社区主流议题**。
+👉 上周说的「主力链路小流量实跑开源」别再拖——这周挑 1 条非核心链路实测，赶在闭源涨价前摸清迁移成本。
 
-**2. [OpenAI 推出 Daybreak：帮全球组织找+修开源 </description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
+**2. [Anthropic 推出 Claude Tag：Slack 里 @Claude 派活的团队 agent](https://www.anthropic.com/news/introducing-claude-tag)** `8/10` · Anthropic 官方</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
