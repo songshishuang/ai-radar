@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-23</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
 
-_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日刷新版_
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日第三次刷新_
 
 ## ⚡ 今日速览
 
-**开源 vs 闭源天平加速倾斜**（HN 三连高热 381/485/520）继续主导；**Anthropic 推出 Claude Tag**——在 Slack 里 @Claude 就能派活的团队 agent，AI 正式进入协作流；**Google Cloud 扩展 Confidential Computing**（可验证私密 AI）、OpenAI 双线推 Daybreak 安全计划 + AI 共享标准；Codex 曝日志 bug 写满 SSD(HN 469) 敲可靠性警钟。
+**OpenAI 联手 Broadcom 自研 LLM 推理芯片**（代号 Jalapeno），算力垂直整合再下一城；**开源 vs 闭源天平继续倾斜**（HN 三连高热 381/485/520）；**Gemini 3.5 Flash 加 computer use**（电脑操作能力）、Anthropic 推 Claude Tag 团队 agent 同时**指控阿里非法提取 Claude 模型**；Google Cloud 上线可验证私密 AI。
 
 ## 🔥 今日必读
 
-**1. [开源迁移共识强化：「切换开源几乎无代价」](https://www.marble.onl/posts/cancel_claude.html)** `9/10` · HN 381/485/520 三连 · `开源` `选型`
-⚡ 三条同日爆款拼出强信号——切换无代价(381 飙升)+[GLM-5.2 vs Opus](https://news.ycombinator.com/)(485)+[Apertus 主权模型](https://apertvs.ai/)(520)，接续 OpenAI 巨亏，**开源迁移从纸面预案变社区主流议题**。
-👉 上周说的「主力链路小流量实跑开源」别再拖——这周挑 1 条非核心链路实测，赶在闭源涨价前摸清迁移成本。
+**1. [OpenAI 联手 Broadcom 发布自研 LLM 推理芯片（Jalapeno）](https://openai.com/index/openai-broadcom-jalapeno-inference-chip)** `9/10` · OpenAI 官方 · `芯片` `算力` `垂直整合`
+⚡ OpenAI 自研推理芯片落地——头部 AI 厂商向**硬件垂直整合**延伸，目标是压低 inference 成本、摆脱对 Nvidia 的单一依赖。
+👉 算力供给在多元化（OpenAI 自研 + Groq 等），意味着中长期 inference 成本有下行空间，纳入你的长期成本测算；也提示「模型→芯片」全栈自研是头部的护城河方向。
 
-**2. [Anthropic 推出 Claude Tag：Slack 里 @Claude 派活的团队 agent](https://www.anthropic.com/news/introducing-claude-tag)** `8/10` · Anthropic 官方</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
+**2. [开源迁移共识强化：「切换开源几乎无代价」](https://www.marble.onl/posts/cancel_claude.html)** `9/10` · HN 381/485/520 三连
+⚡ 同日三爆款——切换无代价(381)+[GLM-5.2 vs Opus](https://news</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
