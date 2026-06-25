@@ -1,19 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-23</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-25</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
 
-_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日第三次刷新_
+_☕ 周四午间精简版 · PM 视角_
 
 ## ⚡ 今日速览
 
-**OpenAI 联手 Broadcom 自研 LLM 推理芯片**（代号 Jalapeno），算力垂直整合再下一城；**开源 vs 闭源天平继续倾斜**（HN 三连高热 381/485/520）；**Gemini 3.5 Flash 加 computer use**（电脑操作能力）、Anthropic 推 Claude Tag 团队 agent 同时**指控阿里非法提取 Claude 模型**；Google Cloud 上线可验证私密 AI。
+**本期信息较少**——6-25 周四午间，当日资讯刚开始放出，目前主要动向是**欧洲对美国「芯片战」的公开反弹**（接续 OpenAI 自研芯片、Cerebras 波动的算力地缘主线）。完整的当日动态建议**晚间再刷新**获取。
+
+## 🔥 今日必读
+
+**1. [欧洲开始反击华盛顿的「芯片战」](https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/)** `7/10` · TechCrunch · `地缘` `芯片` `算力主权`
+⚡ 算力地缘博弈升级——欧洲不愿被美国的芯片出口管制绑定，开始推自主路线，呼应近期 Anthropic 出口管制风波、各国「主权 AI」诉求。
+👉 若业务涉及跨区域部署/合规，关注芯片与模型的「地缘可用性」——不同地区能用的算力与模型正在分化，纳入长期供应链规划。
+
+## 📌 值得关注
+
+- 当日其余条目仍在陆续放出，本期暂收录上述早间动向；社区/长尾源（Product Hunt / HF 论文等）见来源。
+
+---
+
+_本期为周四午间精简版（信息较少如实标注，不为凑数拔高）· 34 源 · 半自动模式 · 晚间可再刷新获取当日完整动态_
+
+&gt; 📝 说明：6-23 / 6-24 两天的完整日报已按真实发布日期补齐归位（此前因日期归集有误，现已修正）。
+</description></item><item><title>AI 情报日报 · 2026-06-24</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-24/</link><guid isPermaLink="false">daily-2026-06-24</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-24
+
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+**Gemini 3.5 Flash 加入 computer use**——电脑操作能力下放到轻量级，agent 自动化门槛大降；**Anthropic 指控阿里非法提取 Claude 模型能力**，模型蒸馏的法律边界浮上台面；开源主线延续，「对世界大部分地区开源 AI 是唯一出路」上 HN，GLM-5.2 上 Vercel AI Gateway；芯片侧 **Cerebras 股价暴跌**、Reid Hoffman 重新定义「谁才是 AI 公司」。
+
+## 🔥 今日必读
+
+**1. [Gemini 3.5 Flash 加入 computer use（电脑操作能力）](https://deepmind.google/blog/introducing-computer-use-in-gemini-3-5-flash/)** `8/10` · Google DeepMind 官方 · `Agent` `computer-use`
+⚡ 轻量级 Gemini 也能「看屏幕、点按钮、操作软件」——computer use 从旗舰下放到 Flash 级，agent 自动化操作的成本门槛大降。
+👉 把「agent 操作现有软件/网页」纳入自动化方案评估；低成本 computer use 让「无 API 也能自动化」的长尾场景变可行。
+
+**2. [Anthropic 指控阿里非法提取 Claude 模型能力](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/)** </description></item><item><title>AI 情报日报 · 2026-06-23</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
+
+_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+**OpenAI 联手 Broadcom 自研 LLM 推理芯片**（代号 Jalapeno），头部厂商向硬件垂直整合降本；**Anthropic 推出 Claude Tag**——Slack 里 @Claude 派活的团队 agent；**Google Cloud 上线可验证私密 AI**（Confidential Computing）；模型侧 **Mistral OCR 4** 与 **Krea 2 开源 12B 图像模型**同日登场，OCR 与开源图像生成各进一步。
 
 ## 🔥 今日必读
 
 **1. [OpenAI 联手 Broadcom 发布自研 LLM 推理芯片（Jalapeno）](https://openai.com/index/openai-broadcom-jalapeno-inference-chip)** `9/10` · OpenAI 官方 · `芯片` `算力` `垂直整合`
-⚡ OpenAI 自研推理芯片落地——头部 AI 厂商向**硬件垂直整合**延伸，目标是压低 inference 成本、摆脱对 Nvidia 的单一依赖。
-👉 算力供给在多元化（OpenAI 自研 + Groq 等），意味着中长期 inference 成本有下行空间，纳入你的长期成本测算；也提示「模型→芯片」全栈自研是头部的护城河方向。
+⚡ OpenAI 自研推理芯片落地——头部 AI 厂商向**硬件垂直整合**延伸，压低 inference 成本、摆脱对 Nvidia 的单一依赖。
+👉 算力供给在多元化，意味中长期 inference 成本有下行空间，纳入长期成本测算；「模型→芯片」全栈自研是头部新护城河方向。
 
-**2. [开源迁移共识强化：「切换开源几乎无代价」](https://www.marble.onl/posts/cancel_claude.html)** `9/10` · HN 381/485/520 三连
-⚡ 同日三爆款——切换无代价(381)+[GLM-5.2 vs Opus](https://news</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
+**2. [Anthropic 推出 Claude Tag：Slack 里 @Claude 派活的团队 agent](https://www.anthropic.com/news/introducing-claude-tag)** `8/10` · Anthropic 官方 · `Agent` `团队协作`
+⚡ 把 Claude 接进 Slack 频道 + 工</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
