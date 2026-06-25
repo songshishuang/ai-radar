@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-25</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
 
-_☕ 周四午间精简版 · PM 视角_
+_☕ 周四午间版 · PM 视角 · 含 GitHub 高星开源盘点_
 
 ## ⚡ 今日速览
 
-**本期信息较少**——6-25 周四午间，当日资讯刚开始放出，目前主要动向是**欧洲对美国「芯片战」的公开反弹**（接续 OpenAI 自研芯片、Cerebras 波动的算力地缘主线）。完整的当日动态建议**晚间再刷新**获取。
+当日新闻午间尚少，主要动向是**欧洲对美国「芯片战」的公开反弹**（接续算力地缘主线）；为补充产研视角，本期盘点一批**当前活跃的高星 AI 开源项目**——本地运行、agent 操作、数据基建、AI 应用生成四条线，正好对应近期「开源迁移 / computer use / 隐私可控」主线。
 
 ## 🔥 今日必读
 
 **1. [欧洲开始反击华盛顿的「芯片战」](https://techcrunch.com/2026/06/24/europe-is-pushing-back-on-washingtons-chip-war/)** `7/10` · TechCrunch · `地缘` `芯片` `算力主权`
-⚡ 算力地缘博弈升级——欧洲不愿被美国的芯片出口管制绑定，开始推自主路线，呼应近期 Anthropic 出口管制风波、各国「主权 AI」诉求。
-👉 若业务涉及跨区域部署/合规，关注芯片与模型的「地缘可用性」——不同地区能用的算力与模型正在分化，纳入长期供应链规划。
+⚡ 算力地缘博弈升级——欧洲不愿被美国芯片出口管制绑定，推自主路线，呼应 Anthropic 出口管制风波与各国「主权 AI」诉求。
+👉 涉及跨区域部署/合规的业务，关注芯片与模型的「地缘可用性」——不同地区可用的算力与模型正在分化，纳入长期供应链规划。
 
-## 📌 值得关注
+## 🔧 GitHub 高星开源盘点（产品 × 技术双视角）
 
-- 当日其余条目仍在陆续放出，本期暂收录上述早间动向；社区/长尾源（Product Hunt / HF 论文等）见来源。
+&gt; ⭐ 为 GitHub API 实时星标 · 均近期活跃（pushed ≥6-15）
 
----
-
-_本期为周四午间精简版（信息较少如实标注，不为凑数拔高）· 34 源 · 半自动模式 · 晚间可再刷新获取当日完整动态_
-
-&gt; 📝 说明：6-23 / 6-24 两天的完整日报已按真实发布日期补齐归位（此前因日期归集有误，现已修正）。
-</description></item><item><title>AI 情报日报 · 2026-06-24</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-24/</link><guid isPermaLink="false">daily-2026-06-24</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-24
+**① [ollama/ollama](https://github.com/ollama/ollama)** ⭐164k · Go · `本地运行`
+- 🎯 **产品**：一行命令在本地跑开源大模型（Kimi-K2.6 / GLM-5.1 / DeepSeek / MiniMax 等），零云依赖、零 API key。
+- 🔧 **技术**：轻量 Go 运行时 + 模型量化 + 统一拉取接口，Mac/Linux/Win 全平台。</description></item><item><title>AI 情报日报 · 2026-06-24</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-24/</link><guid isPermaLink="false">daily-2026-06-24</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-24
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
