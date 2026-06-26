@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-25</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-26</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-26/</link><guid isPermaLink="false">daily-2026-06-26</guid><pubDate>Thu, 25 Jun 2026 23:04:43 -0000</pubDate><description># AI 情报日报 · 2026-06-26
+
+_☕ 周五上午版 · PM 视角 · 当日核心动态偏少，收录近 36h 要闻_
+
+## ⚡ 今日速览
+
+6-26 上午 AI 行业核心动态偏少（本期收录近 36h 要闻）。最有 PM 价值的是 **Ford 因 AI 质检失误、重新雇回退休老师傅**——AI 落地的现实校准；**AI 首次完整读出整卷赫库兰尼姆古卷**，标志 AI for science 新高度；开源 AI 知识库、AI 模型中立性研究等治理话题升温。
+
+## 🔥 今日必读
+
+**1. [Ford 因 AI 质检失误，重新雇回退休质检老师傅](https://www.bloomberg.com/news/articles/2026-06-25/ford-has-been-rehiring-quality-inspectors-after-ai-fell-short)** `8/10` · Bloomberg / HN 578 · `AI落地` `人机协作` `制造业`
+⚡ 据 Bloomberg 报道，福特用 AI 替代质检后出现疏漏，不得不返聘有经验的老质检员——**AI 不是万能开关，过度自动化会丢掉「老师傅的隐性经验」**。
+👉 给产品里的 AI 自动化划清边界：高风险/依赖隐性经验的环节保留「人在回路」；把「AI + 资深人工复核」当成稳态，而非过渡态。别为自动化率牺牲质量。
+
+**2. [AI 首次完整读出整卷赫库兰尼姆火山古卷](https://scrollprize.org/firstscroll)** `7/10` · ScrollPrize / HN 1032 · `AI for science` `应用突破`
+⚡ 被维苏威火山碳化、近 2000 年无法展开的古卷，首次借 AI 完整读出文字——AI 在「人类做不到的科研难题」上再下一城。
+👉</description></item><item><title>AI 情报日报 · 2026-06-25</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
 
 _☕ 周四午间版 · PM 视角 · 含 GitHub 高星开源盘点_
 
