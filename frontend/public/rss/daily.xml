@@ -1,4 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-26</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-26/</link><guid isPermaLink="false">daily-2026-06-26</guid><pubDate>Thu, 25 Jun 2026 23:04:43 -0000</pubDate><description># AI 情报日报 · 2026-06-26
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-27</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-27/</link><guid isPermaLink="false">daily-2026-06-27</guid><pubDate>Fri, 26 Jun 2026 23:05:48 -0000</pubDate><description># AI 情报日报 · 2026-06-27
+
+_☕ 周六版 · PM 视角 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+**特朗普政府解禁 Anthropic Mythos**（开放给 100+ 美国公司/机构使用），同时 **OpenAI 预览 GPT-5.6 Sol 下一代模型**、据报道**美国政府将审核谁能使用 GPT-5.6**——「AI 前沿模型的政府准入管控」正成为新常态；开源 vs 闭源差距、AI 助手安全攻防等技术话题延续。
+
+## 🔥 今日必读
+
+**1. [特朗普政府解禁 Anthropic Mythos，开放给 100+ 美国公司与机构](https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/)** `9/10` · TechCrunch · `Anthropic` `监管` `准入`
+⚡ 此前被限制的 Claude Mythos 解禁，但据报道是以「受控名单」方式开放（100+ 指定机构）——**供应商可用性从「禁/不禁」变成「谁在准入名单上」的精细化管控**。
+👉 你跟了一周的「Anthropic 禁令」剧情迎来转折：风险没消失、而是变成「准入资格」。把「主力模型供应商的准入政策变化」纳入持续跟踪，关键链路保留跨厂商切换能力。
+
+**2. [OpenAI 预览 GPT-5.6 Sol：下一代模型](https://openai.com/index/previewing-gpt-5-6-sol)** `9/10` · OpenAI 官方 / HN 864 · `OpenAI` `模型发布`
+⚡ OpenAI 预览下一代旗舰 GPT-5.6 Sol——前沿</description></item><item><title>AI 情报日报 · 2026-06-26</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-26/</link><guid isPermaLink="false">daily-2026-06-26</guid><pubDate>Thu, 25 Jun 2026 23:04:43 -0000</pubDate><description># AI 情报日报 · 2026-06-26
 
 _☕ 周五上午版 · PM 视角 · 当日核心动态偏少，收录近 36h 要闻_
 
