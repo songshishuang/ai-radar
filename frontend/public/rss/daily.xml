@@ -1,4 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-06-28</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-28/</link><guid isPermaLink="false">daily-2026-06-28</guid><pubDate>Sun, 28 Jun 2026 07:06:09 -0000</pubDate><description># AI 情报日报 · 2026-06-28
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-07-06</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-06/</link><guid isPermaLink="false">daily-2026-07-06</guid><pubDate>Tue, 07 Jul 2026 06:13:31 +0000</pubDate><description># AI 情报日报 · 2026-07-06
+
+_☕ 正文约 2 分钟读完 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+Agent 落地的主线从“能不能做事”转向“能不能被组织安全使用”。模型平台和云平台都在补模型之外的生产层：网关、沙箱、评测、权限、数据闭环。开源侧新信号不再是常青仓库刷屏，而是近 7 天冒出的 Agent 成本、安全、科研工作台和本地模型项目。
+
+## 🔥 今日必读
+
+**1. [Alberta 用 Claude 做政府安全扫描](https://www.anthropic.com/news/alberta-government-claude-cybersecurity)** `9/10` · Anthropic News
+⚡ AI coding agent 正进入遗留系统治理和安全修复场景。
+👉 本周挑 1 个老系统跑“扫描-修复建议-人工复核”PoC。
+
+**2. [Vercel：模型与 Agent 正在解耦](https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/)** `9/10` · TechCrunch
+⚡ 生产 AI 的核心变成模型网关、沙箱、审计和成本路由。
+👉 把现有 AI 功能拆成模型、工具、权限、日志、评测 5 张表。
+
+**3. [LeRobot v0.6.0 补机器人学习闭环](https://huggingface.co/blog/lerobot-release-v060)** `8/10` · HuggingFace Blog
+⚡ 机器人开源栈从训练脚本升级为想象、评测、改进闭环。
+👉 关注 `lerobot-eval`，判断具身智能是否能进入产品验证。
+
+**4</description></item><item><title>AI 情报日报 · 2026-06-28</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-28/</link><guid isPermaLink="false">daily-2026-06-28</guid><pubDate>Sun, 28 Jun 2026 07:06:09 -0000</pubDate><description># AI 情报日报 · 2026-06-28
 
 _☕ 周日版 · PM 视角 · 深度解读见文末附录_
 
