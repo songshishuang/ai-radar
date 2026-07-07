@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-07-06</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-06/</link><guid isPermaLink="false">daily-2026-07-06</guid><pubDate>Tue, 07 Jul 2026 06:13:31 +0000</pubDate><description># AI 情报日报 · 2026-07-06
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-07-07</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-07/</link><guid isPermaLink="false">daily-2026-07-07</guid><pubDate>Tue, 07 Jul 2026 09:21:25 +0000</pubDate><description># AI 情报日报 · 2026-07-07
+
+_☕ 正文约 2 分钟读完 · 深度解读见文末附录_
+
+## ⚡ 今日速览
+
+Agent 生产化继续沿两条线推进：Vercel 强调模型与 Agent 运行层解耦，Claude Code 开始补遥测和工作流规模控制。安全与治理信号更具体，AI 执行型勒索攻击、Google 数据训练设置、自治地面车辆实战部署都在提醒产品要把权限、留痕和人机边界前置。开源与研究侧的重点从炫技转向工作流资产：LeRobot 补机器人学习闭环，RAG 剪枝、小模型离线场景和 Claude 视频/研究 skill 都值得产研团队观察。
+
+## 🔥 今日必读
+
+**1. [Vercel：模型与 Agent 正在解耦](https://techcrunch.com/2026/07/06/vercel-ceo-guillermo-rauch-on-the-fight-to-split-off-models-from-agents/)** `9/10` · TechCrunch
+⚡ 企业 AI 架构的核心从“选哪个模型”转向“如何路由、审计、沙箱和控成本”。
+👉 把现有 AI 功能拆成模型、工具、权限、日志、评测 5 张表，找出哪些控制面能力必须自有。
+
+**2. [AI 执行型勒索攻击仍有人类参与](https://techcrunch.com/2026/07/06/the-first-ai-run-ransomware-attack-still-needed-a-human/)** `8/10` · TechCrunch
+⚡ 风险不在“全自动攻击”叙事，而在人类用 Agent 放大执行链路。
+👉 更新 Agent 安全需求：工具调用、凭证、外联、审批、回放都必须结构化留痕。
+
+**3. [LeRobot v0.6.0 补机器人学习闭环](https://h</description></item><item><title>AI 情报日报 · 2026-07-06</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-06/</link><guid isPermaLink="false">daily-2026-07-06</guid><pubDate>Tue, 07 Jul 2026 06:13:31 +0000</pubDate><description># AI 情报日报 · 2026-07-06
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -333,18 +351,4 @@ AI 融资上市热潮加速，多家创业企业竞相启动 IPO 计划，产业
 
 ## 📌 值得关注
 
-- **[shiyu-c</description></item><item><title>AI 情报日报 · 2026-06-14</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-14/</link><guid isPermaLink="false">daily-2026-06-14</guid><pubDate>Sat, 13 Jun 2026 23:04:31 -0000</pubDate><description># AI 情报日报 · 2026-06-14
-
-_☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
-
-## ⚡ 今日速览
-
-监管禁 Anthropic 的瓜揭盖——**亚马逊安全研究 + Amazon CEO 游说白宫**促成对 Claude Fable/Mythos 的封禁，「竞争对手能推动监管」成供应商风险新维度；OpenAI 同日吃**州检察长调查** + 推 **Partner Network**，头部厂商监管压力普遍化；**MCP 生态单日爆发**（awesome-mcp-servers 20+ 新 server），工具集成范式加速成熟；KPMG 因 **AI 幻觉撤回报告**，企业用 AI 的可信度翻车再添一例。
-
-## 🔥 今日必读
-
-**1. [监管禁 Anthropic 背后：亚马逊安全研究 + Amazon CEO 游说白宫](https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban)** `9/10` · HN 781 / TechCrunch / WSJ / The Verge · `Anthropic` `监管` `Amazon`
-⚡ 供应商风险升级到新维度——**竞争对手能用安全研究+游说推动监管封禁**你依赖的模型，不只是技术或合规问题。
-👉 把「模型供应商的竞争关系」纳入选型风险评估；对关键链路确保有跨厂商热切换能力，别被单一厂商的政治风险绑死。
-
-**2. [OpenAI 遭多州检察长调查 + 推出 Partner Network](https://techcrunch.com/2026/06/13/openai-faces-investigation-from-state-at</description></item></channel></rss>
+- **[shiyu-c</description></item></channel></rss>
