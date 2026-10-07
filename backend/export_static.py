@@ -2,7 +2,7 @@
 
 用法：
     INTEL_DB_URL=sqlite:///../data/intel.db \
-    SITE_BASE=https://songshishuang.github.io/ai-radar \
+    SITE_BASE=https://airadar1.web.app \
     .venv/bin/python export_static.py
 
 产出：
@@ -30,7 +30,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 CONTENT_DIR = REPO_ROOT / "frontend" / "content"
 RSS_DIR = REPO_ROOT / "frontend" / "public" / "rss"
 
-SITE_BASE = os.environ.get("SITE_BASE", "https://songshishuang.github.io/ai-radar").rstrip("/")
+SITE_BASE = os.environ.get("SITE_BASE", "https://airadar1.web.app").rstrip("/")
 # 把旧报告 HTML/Markdown 里写死的本地地址替换为生产地址
 LOCAL_BASES = ["http://localhost:3000", "http://127.0.0.1:3000"]
 

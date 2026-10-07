@@ -1,25 +1,25 @@
-name: Deploy to GitHub Pages
+name: Deploy to Firebase Hosting
 
 on:
   push:
     branches: [main]
     paths:
       - "frontend/**"
+      - "firebase.json"
+      - ".firebaserc"
       - ".github/workflows/deploy.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 # 同一时间只跑一个部署，新 push 取消进行中的旧部署
 concurrency:
-  group: pages
+  group: firebase-hosting
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -34,25 +34,19 @@ jobs:
         working-directory: frontend
         run: npm ci
 
+      # Firebase Hosting 部署在站点根路径，不设 PAGES_BASE_PATH
       - name: Build static site
         working-directory: frontend
-        env:
-          # 项目站点部署在 /ai-radar 子路径
-          PAGES_BASE_PATH: /ai-radar
         run: npm run build
 
-      - uses: actions/configure-pages@v5
+      - name: 写 service account 到临时文件
+        env:
+          SA: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          [ -n "$SA" ] || { echo "::error::缺少仓库 Secret FIREBASE_SERVICE_ACCOUNT（airadar1 项目的服务账号 JSON）"; exit 1; }
+          printf '%s' "$SA" > /tmp/sa.json
 
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: frontend/out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+      - name: 部署 Firebase Hosting
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: /tmp/sa.json
+        run: npx firebase-tools@15 deploy --only hosting --project airadar1 --non-interactive

@@ -23,7 +23,7 @@
     <key>HOME</key>
     <string>/Users/songshishuang</string>
     <key>SITE_BASE</key>
-    <string>https://songshishuang.github.io/ai-radar</string>
+    <string>https://airadar1.web.app</string>
   </dict>
 
   <!-- 每天 06:00（本地时区 = 北京）。Mac 休眠时错过则唤醒后补跑一次 -->

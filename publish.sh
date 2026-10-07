@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
-# 本地发布流水线（A2 模式：本地生成 + GitHub Pages 托管）
+# 本地发布流水线（A2 模式：本地生成 + Firebase Hosting 托管）
 #
 #   ./publish.sh           # 仅导出已生成的报告为静态数据 → commit → push
 #   ./publish.sh --gen     # 先跑全量管道（抓取→加工→生成日/周/月报）再导出发布
 #
-# push 后 GitHub Actions 自动构建 Next.js 静态站并部署到 Pages。
+# push 后 GitHub Actions 自动构建 Next.js 静态站并部署到 Firebase Hosting。
 set -euo pipefail
 cd "$(dirname "$0")"
 
-SITE_BASE="${SITE_BASE:-https://songshishuang.github.io/ai-radar}"
+SITE_BASE="${SITE_BASE:-https://airadar1.web.app}"
 PY=backend/.venv/bin/python
 
 if [[ "${1:-}" == "--gen" ]]; then
@@ -39,4 +39,4 @@ else
 fi
 git push
 
-echo "✅ 已推送。GitHub Actions 正在构建并部署 → https://songshishuang.github.io/ai-radar/"
+echo "✅ 已推送。GitHub Actions 正在构建并部署 → $SITE_BASE/"

@@ -2,31 +2,35 @@
 
 个人 AI 信息聚合与研报系统：自动抓取国外核心 AI 信息源 → Claude 生成中文摘要与 PM 视角深度研报 → 日报/周报/月报 → 网站 / 邮件 / RSS / 企微·TG 订阅分发。
 
-🌐 **在线站点（GitHub Pages）**：https://songshishuang.github.io/ai-radar/
+🌐 **在线站点（Firebase Hosting）**：https://airadar1.web.app/（旧 GitHub Pages 站 https://songshishuang.github.io/ai-radar/ 停在 2026-07-07，保留供旧链接访问）
 🧰 **配套 Skill**：[ai-radar](https://github.com/songshishuang/ai-radar-skill) — 在 Claude Code / agent 工具里一句话生成 AI 研报（零部署版，本项目的 skill 形态产物）
 
 - 设计文档：[docs/superpowers/specs/2026-06-12-ai-intel-site-design.md](docs/superpowers/specs/2026-06-12-ai-intel-site-design.md)
 - 实施计划：[docs/superpowers/plans/2026-06-12-ai-intel-site.md](docs/superpowers/plans/2026-06-12-ai-intel-site.md)
 
-## GitHub Pages 部署（A2：本地生成 + 静态托管，零服务器零 API key）
+## Firebase Hosting 部署（A2：本地生成 + 静态托管，零服务器零 API key）
 
-网站是 Next.js **静态导出**，托管在 GitHub Pages；报告由你本机用 claude CLI 生成，一条命令发布：
+网站是 Next.js **静态导出**，托管在 Firebase Hosting（项目 `airadar1`）；报告由你本机用 claude CLI 生成，一条命令发布：
 
 ```bash
 ./publish.sh --gen   # 本地跑全量管道（抓取→加工→生成日/周/月报）→ 导出静态数据 → commit → push
 ./publish.sh         # 仅把已生成的报告重新导出并发布（不重跑管道）
+
+# 发布 ai-radar skill 生成的报告：先入库，再导出发布（发布前先过 skill 的出处校验）
+backend/.venv/bin/python backend/import_skill_report.py ~/skills/ai-radar-skill/ai-radar-reports/daily-YYYY-MM-DD.md
+./publish.sh
 ```
 
-`git push` 后 `.github/workflows/deploy.yml` 自动构建静态站并部署到 Pages。数据流：
+`git push` 后 `.github/workflows/deploy.yml` 自动构建静态站并部署到 Firebase Hosting；部署凭据是仓库 Secret `FIREBASE_SERVICE_ACCOUNT`（airadar1 项目的服务账号 JSON）。数据流：
 
-| 动态全栈（VPS 版） | GitHub 静态版 |
+| 动态全栈（VPS 版） | 静态版（Firebase Hosting） |
 |---|---|
 | APScheduler 常驻调度 | 本机 `publish.sh` 触发生成 |
 | FastAPI `/api` 运行时取数 | `backend/export_static.py` 导出 `frontend/content/*.json`（git 即数据库） |
-| Next.js SSR | Next.js 静态导出（`output: export`，`PAGES_BASE_PATH=/ai-radar`） |
+| Next.js SSR | Next.js 静态导出（`output: export`，部署在站点根路径） |
 | 站内邮箱订阅表单 | 降级为 RSS 订阅页（`/rss/*.xml`，静态生成） |
 
-> 邮件 / 企微 / TG 推送仍由下方「VPS 部署」的完整后端提供；GitHub 静态站提供网页浏览 + RSS。
+> 邮件 / 企微 / TG 推送仍由下方「VPS 部署」的完整后端提供；静态站提供网页浏览 + RSS。
 
 ## 本地运行（开发模式：SQLite + claude CLI）
 
@@ -98,7 +102,7 @@ docker compose up -d --build
 
 ## 每天自动发布（macOS launchd · 零 API 费）
 
-每天 8:00（本地时区）自动跑 `publish.sh --gen` 生成日报并上 Pages，用 claude CLI 订阅、不卡权限、不依赖 Claude app 开着（只要 Mac 开机/唤醒）：
+每天 8:00（本地时区）自动跑 `publish.sh --gen` 生成日报并发布到 Firebase Hosting，用 claude CLI 订阅、不卡权限、不依赖 Claude app 开着（只要 Mac 开机/唤醒）：
 
 ```bash
 cp deploy/com.songshishuang.ai-radar-daily.plist ~/Library/LaunchAgents/
