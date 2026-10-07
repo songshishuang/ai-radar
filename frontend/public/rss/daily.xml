@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://songshishuang.github.io/ai-radar</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-07-07</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-07/</link><guid isPermaLink="false">daily-2026-07-07</guid><pubDate>Tue, 07 Jul 2026 09:21:25 +0000</pubDate><description># AI 情报日报 · 2026-07-07
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>AI 情报站 · daily 报告</title><link>https://airadar1.web.app</link><description>AI 情报站 · daily 报告</description><item><title>AI 情报日报 · 2026-07-07</title><link>https://airadar1.web.app/reports/daily/2026-07-07/</link><guid isPermaLink="false">daily-2026-07-07</guid><pubDate>Tue, 07 Jul 2026 09:21:25 +0000</pubDate><description># AI 情报日报 · 2026-07-07
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -16,7 +16,7 @@ Agent 生产化继续沿两条线推进：Vercel 强调模型与 Agent 运行层
 ⚡ 风险不在“全自动攻击”叙事，而在人类用 Agent 放大执行链路。
 👉 更新 Agent 安全需求：工具调用、凭证、外联、审批、回放都必须结构化留痕。
 
-**3. [LeRobot v0.6.0 补机器人学习闭环](https://h</description></item><item><title>AI 情报日报 · 2026-07-06</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-06/</link><guid isPermaLink="false">daily-2026-07-06</guid><pubDate>Tue, 07 Jul 2026 06:13:31 +0000</pubDate><description># AI 情报日报 · 2026-07-06
+**3. [LeRobot v0.6.0 补机器人学习闭环](https://h</description></item><item><title>AI 情报日报 · 2026-07-06</title><link>https://airadar1.web.app/reports/daily/2026-07-06/</link><guid isPermaLink="false">daily-2026-07-06</guid><pubDate>Tue, 07 Jul 2026 06:13:31 +0000</pubDate><description># AI 情报日报 · 2026-07-06
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -38,7 +38,7 @@ Agent 落地的主线从“能不能做事”转向“能不能被组织安全�
 ⚡ 机器人开源栈从训练脚本升级为想象、评测、改进闭环。
 👉 关注 `lerobot-eval`，判断具身智能是否能进入产品验证。
 
-**4</description></item><item><title>AI 情报日报 · 2026-07-05</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-05/</link><guid isPermaLink="false">daily-2026-07-05</guid><pubDate>Mon, 06 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-05
+**4</description></item><item><title>AI 情报日报 · 2026-07-05</title><link>https://airadar1.web.app/reports/daily/2026-07-05/</link><guid isPermaLink="false">daily-2026-07-05</guid><pubDate>Mon, 06 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-05
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -57,7 +57,7 @@ _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 👉 选择 1 门内部培训课，把 AI tutor 设计成练习、反馈和测验闭环。
 
 **3. [代码整洁度影响 coding agent](https://arxiv.org/abs/2605.20049)** `7/10` · Hacker News AI
-⚡ Agent 效果受代码库结构影响，工程卫生会直接影响 AI 产出</description></item><item><title>AI 情报日报 · 2026-07-04</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-04/</link><guid isPermaLink="false">daily-2026-07-04</guid><pubDate>Sun, 05 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-04
+⚡ Agent 效果受代码库结构影响，工程卫生会直接影响 AI 产出</description></item><item><title>AI 情报日报 · 2026-07-04</title><link>https://airadar1.web.app/reports/daily/2026-07-04/</link><guid isPermaLink="false">daily-2026-07-04</guid><pubDate>Sun, 05 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-04
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -75,7 +75,7 @@ _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 ⚡ MCP 生态继续加速，工具连接层正在变成 Agent 应用基础设施。
 👉 盘点当前 Agent 用到的工具连接，区分官方 server、社区 server 和自研 server。
 
-**3. [Midjourney 要求片方披露 AI 使用](https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-d</description></item><item><title>AI 情报日报 · 2026-07-03</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-03/</link><guid isPermaLink="false">daily-2026-07-03</guid><pubDate>Sat, 04 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-03
+**3. [Midjourney 要求片方披露 AI 使用](https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-d</description></item><item><title>AI 情报日报 · 2026-07-03</title><link>https://airadar1.web.app/reports/daily/2026-07-03/</link><guid isPermaLink="false">daily-2026-07-03</guid><pubDate>Sat, 04 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-03
 
 _☕ 正文约 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -95,7 +95,7 @@ AI 落地竞争继续从模型 API 转向交付组织：Microsoft 也设立 AI d
 ⚡ 模型厂商正在向算力供应链深处扩张，成本和产能会成为产品能力。
 👉 给大客户方案补充模型供应商、芯片路径、容量冗余和价格风险说明。
 
-**3. [Vercel AI Gateway 支持路由规则](https://vercel.com/ch</description></item><item><title>AI 情报日报 · 2026-07-02</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-02/</link><guid isPermaLink="false">daily-2026-07-02</guid><pubDate>Fri, 03 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-02
+**3. [Vercel AI Gateway 支持路由规则](https://vercel.com/ch</description></item><item><title>AI 情报日报 · 2026-07-02</title><link>https://airadar1.web.app/reports/daily/2026-07-02/</link><guid isPermaLink="false">daily-2026-07-02</guid><pubDate>Fri, 03 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-02
 
 _☕ 正文约 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -115,7 +115,7 @@ Agent 基建继续工程化：AWS 的 A2A gateway、AgentCore Memory、Model Pro
 ⚡ 多 agent 系统的发现、路由、访问控制开始被产品化。
 👉 把内部 agent 按能力、权限、调用方、审计字段做一版服务目录。
 
-*</description></item><item><title>AI 情报日报 · 2026-07-01</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-07-01/</link><guid isPermaLink="false">daily-2026-07-01</guid><pubDate>Thu, 02 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-01
+*</description></item><item><title>AI 情报日报 · 2026-07-01</title><link>https://airadar1.web.app/reports/daily/2026-07-01/</link><guid isPermaLink="false">daily-2026-07-01</guid><pubDate>Thu, 02 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-07-01
 
 _☕ 正文约 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -135,7 +135,7 @@ AI 公司开始更重视落地交付与垂直场景，Amazon FDE、Claude Scienc
 ⚡ 大模型产品从通用聊天转向“行业工作台”，科学计算先打样。
 👉 拆一个垂直行业流程，看哪些工具、数据和审计能被工作台化。
 
-**3. [Google 推出 Nano Banana 2 Lite 与 Gemini Omni Flash](https://deepmind.google/blog/start-building-with-na</description></item><item><title>AI 情报日报 · 2026-06-30</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-30/</link><guid isPermaLink="false">daily-2026-06-30</guid><pubDate>Wed, 01 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-06-30
+**3. [Google 推出 Nano Banana 2 Lite 与 Gemini Omni Flash](https://deepmind.google/blog/start-building-with-na</description></item><item><title>AI 情报日报 · 2026-06-30</title><link>https://airadar1.web.app/reports/daily/2026-06-30/</link><guid isPermaLink="false">daily-2026-06-30</guid><pubDate>Wed, 01 Jul 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-06-30
 
 _☕ 正文约 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -156,7 +156,7 @@ Agent 正从“能跑”转向“可管可值班”：AWS、Vercel、Cursor 同�
 👉 选 1 个低风险研发任务，试点“手机下发、桌面验收”的异步流程。
 
 **3. [Vercel AI Gateway 支持实时语音 Agent](https://vercel.com/blog/realtime-voice-agents-on-ai-gateway)** `8/10` · Vercel
-⚡ 语音</description></item><item><title>AI 情报日报 · 2026-06-29</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-29/</link><guid isPermaLink="false">daily-2026-06-29</guid><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-06-29
+⚡ 语音</description></item><item><title>AI 情报日报 · 2026-06-29</title><link>https://airadar1.web.app/reports/daily/2026-06-29/</link><guid isPermaLink="false">daily-2026-06-29</guid><pubDate>Tue, 30 Jun 2026 06:00:00 +0000</pubDate><description># AI 情报日报 · 2026-06-29
 
 _☕ 正文约 2 分钟读完 · 深度解读见文末附录_
 
@@ -175,7 +175,7 @@ AI 落地继续向企业工作流和数据层下沉，OpenAI、Google Cloud、Ve
 👉 找 1 个运营/用户反馈表，用 AI.AGG 跑趋势归纳和异常解释 PoC。
 
 **3. [Vercel AI Gateway 支持实时语音](https://vercel.com/blog/realtime-voice-agents-on-ai-gateway)** `8/10` · Vercel Blog
-⚡ 语音 Agent 正从独</description></item><item><title>AI 情报日报 · 2026-06-28</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-28/</link><guid isPermaLink="false">daily-2026-06-28</guid><pubDate>Sun, 28 Jun 2026 07:06:09 -0000</pubDate><description># AI 情报日报 · 2026-06-28
+⚡ 语音 Agent 正从独</description></item><item><title>AI 情报日报 · 2026-06-28</title><link>https://airadar1.web.app/reports/daily/2026-06-28/</link><guid isPermaLink="false">daily-2026-06-28</guid><pubDate>Sun, 28 Jun 2026 07:06:09 -0000</pubDate><description># AI 情报日报 · 2026-06-28
 
 _☕ 周日版 · PM 视角 · 深度解读见文末附录_
 
@@ -189,7 +189,7 @@ _☕ 周日版 · PM 视角 · 深度解读见文末附录_
 ⚡ 据 TechCrunch 报道，在 Anthropic 出口禁令持续的背景下，亚洲多家 AI 创业公司推出对标 Mythos 的模型——**前沿模型的供给正从「少数厂商」走向「区域化、多极化」**。这是昨日「政府准入管控」主线的直接反作用：管制收紧 → 本土替代涌现。
 👉 你跟了一周的「准入管控」剧情进入下半场：约束催生了新供给。把「区域化替代模型」纳入选型雷达——多一组备选意味着少一分被单一供应商/单一辖区卡住的风险；但也要评估新模型的能力成熟度与合规边界，别盲目替换。
 
-**2. [DSpark：投机解码加速 LLM 推理](https://github.com/de</description></item><item><title>AI 情报日报 · 2026-06-27</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-27/</link><guid isPermaLink="false">daily-2026-06-27</guid><pubDate>Fri, 26 Jun 2026 23:05:48 -0000</pubDate><description># AI 情报日报 · 2026-06-27
+**2. [DSpark：投机解码加速 LLM 推理](https://github.com/de</description></item><item><title>AI 情报日报 · 2026-06-27</title><link>https://airadar1.web.app/reports/daily/2026-06-27/</link><guid isPermaLink="false">daily-2026-06-27</guid><pubDate>Fri, 26 Jun 2026 23:05:48 -0000</pubDate><description># AI 情报日报 · 2026-06-27
 
 _☕ 周六版 · PM 视角 · 深度解读见文末附录_
 
@@ -204,7 +204,7 @@ _☕ 周六版 · PM 视角 · 深度解读见文末附录_
 👉 你跟了一周的「Anthropic 禁令」剧情迎来转折：风险没消失、而是变成「准入资格」。把「主力模型供应商的准入政策变化」纳入持续跟踪，关键链路保留跨厂商切换能力。
 
 **2. [OpenAI 预览 GPT-5.6 Sol：下一代模型](https://openai.com/index/previewing-gpt-5-6-sol)** `9/10` · OpenAI 官方 / HN 864 · `OpenAI` `模型发布`
-⚡ OpenAI 预览下一代旗舰 GPT-5.6 Sol——前沿</description></item><item><title>AI 情报日报 · 2026-06-26</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-26/</link><guid isPermaLink="false">daily-2026-06-26</guid><pubDate>Thu, 25 Jun 2026 23:04:43 -0000</pubDate><description># AI 情报日报 · 2026-06-26
+⚡ OpenAI 预览下一代旗舰 GPT-5.6 Sol——前沿</description></item><item><title>AI 情报日报 · 2026-06-26</title><link>https://airadar1.web.app/reports/daily/2026-06-26/</link><guid isPermaLink="false">daily-2026-06-26</guid><pubDate>Thu, 25 Jun 2026 23:04:43 -0000</pubDate><description># AI 情报日报 · 2026-06-26
 
 _☕ 周五上午版 · PM 视角 · 当日核心动态偏少，收录近 36h 要闻_
 
@@ -220,7 +220,7 @@ _☕ 周五上午版 · PM 视角 · 当日核心动态偏少，收录近 36h �
 
 **2. [AI 首次完整读出整卷赫库兰尼姆火山古卷](https://scrollprize.org/firstscroll)** `7/10` · ScrollPrize / HN 1032 · `AI for science` `应用突破`
 ⚡ 被维苏威火山碳化、近 2000 年无法展开的古卷，首次借 AI 完整读出文字——AI 在「人类做不到的科研难题」上再下一城。
-👉</description></item><item><title>AI 情报日报 · 2026-06-25</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
+👉</description></item><item><title>AI 情报日报 · 2026-06-25</title><link>https://airadar1.web.app/reports/daily/2026-06-25/</link><guid isPermaLink="false">daily-2026-06-25</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-25
 
 _☕ 周四午间版 · PM 视角 · 含 GitHub 高星开源盘点_
 
@@ -240,7 +240,7 @@ _☕ 周四午间版 · PM 视角 · 含 GitHub 高星开源盘点_
 
 **① [ollama/ollama](https://github.com/ollama/ollama)** ⭐164k · Go · `本地运行`
 - 🎯 **产品**：一行命令在本地跑开源大模型（Kimi-K2.6 / GLM-5.1 / DeepSeek / MiniMax 等），零云依赖、零 API key。
-- 🔧 **技术**：轻量 Go 运行时 + 模型量化 + 统一拉取接口，Mac/Linux/Win 全平台。</description></item><item><title>AI 情报日报 · 2026-06-24</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-24/</link><guid isPermaLink="false">daily-2026-06-24</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-24
+- 🔧 **技术**：轻量 Go 运行时 + 模型量化 + 统一拉取接口，Mac/Linux/Win 全平台。</description></item><item><title>AI 情报日报 · 2026-06-24</title><link>https://airadar1.web.app/reports/daily/2026-06-24/</link><guid isPermaLink="false">daily-2026-06-24</guid><pubDate>Thu, 25 Jun 2026 04:20:12 -0000</pubDate><description># AI 情报日报 · 2026-06-24
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -254,7 +254,7 @@ _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 ⚡ 轻量级 Gemini 也能「看屏幕、点按钮、操作软件」——computer use 从旗舰下放到 Flash 级，agent 自动化操作的成本门槛大降。
 👉 把「agent 操作现有软件/网页」纳入自动化方案评估；低成本 computer use 让「无 API 也能自动化」的长尾场景变可行。
 
-**2. [Anthropic 指控阿里非法提取 Claude 模型能力](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/)** </description></item><item><title>AI 情报日报 · 2026-06-23</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
+**2. [Anthropic 指控阿里非法提取 Claude 模型能力](https://www.reuters.com/world/china/anthropic-says-alibaba-illicitly-extracted-claude-ai-model-capabilities-2026-06-24/)** </description></item><item><title>AI 情报日报 · 2026-06-23</title><link>https://airadar1.web.app/reports/daily/2026-06-23/</link><guid isPermaLink="false">daily-2026-06-23</guid><pubDate>Tue, 23 Jun 2026 02:44:28 -0000</pubDate><description># AI 情报日报 · 2026-06-23
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -269,7 +269,7 @@ _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 👉 算力供给在多元化，意味中长期 inference 成本有下行空间，纳入长期成本测算；「模型→芯片」全栈自研是头部新护城河方向。
 
 **2. [Anthropic 推出 Claude Tag：Slack 里 @Claude 派活的团队 agent](https://www.anthropic.com/news/introducing-claude-tag)** `8/10` · Anthropic 官方 · `Agent` `团队协作`
-⚡ 把 Claude 接进 Slack 频道 + 工</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
+⚡ 把 Claude 接进 Slack 频道 + 工</description></item><item><title>AI 情报日报 · 2026-06-22</title><link>https://airadar1.web.app/reports/daily/2026-06-22/</link><guid isPermaLink="false">daily-2026-06-22</guid><pubDate>Mon, 22 Jun 2026 06:06:31 -0000</pubDate><description># AI 情报日报 · 2026-06-22
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -285,7 +285,7 @@ _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
 **2. [Claude 上线身份验证](https://support.claude.com/en/articles/14328960-identity-verification-on-claude)** `8/10` · Anthropic 官方 / HN 675 · `合规` `身份验证` `平台`
 ⚡ AI 平台开始要求身份验证（KYC 化）——在监管收紧大背景下，平台合规门槛上升，可能影响 API 接入与账号策略。
-👉 若你产品依</description></item><item><title>AI 情报日报 · 2026-06-19</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-19/</link><guid isPermaLink="false">daily-2026-06-19</guid><pubDate>Thu, 18 Jun 2026 23:09:01 -0000</pubDate><description># AI 情报日报 · 2026-06-19
+👉 若你产品依</description></item><item><title>AI 情报日报 · 2026-06-19</title><link>https://airadar1.web.app/reports/daily/2026-06-19/</link><guid isPermaLink="false">daily-2026-06-19</guid><pubDate>Thu, 18 Jun 2026 23:09:01 -0000</pubDate><description># AI 情报日报 · 2026-06-19
 
 _☕ 正文 2 分钟读完 · 深度解读见文末附录_
 
@@ -303,7 +303,7 @@ OpenAI年亏数十亿美元，IPO前挖角谷歌AI领袖，融资压力与人才
 ⚡ 算力供给侧多元化窗口开启，AI基础设施采购决策逻辑将重构，PM需重新评估技术选型成本
 👉 联系公司基础设施/云架构团队，将AWS Inferentia2/Trainium2纳入下一季度AI推理成本评估范围，输出与当前GPU方案的TCO对比报告
 
-**3. [Midjourney 发布超声全身扫描仪，AI图像公司跨界医疗硬件](https://www.theverge.com/ai-artificial-intellig</description></item><item><title>AI 情报日报 · 2026-06-17</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-17/</link><guid isPermaLink="false">daily-2026-06-17</guid><pubDate>Wed, 17 Jun 2026 13:10:35 -0000</pubDate><description># AI 情报日报 · 2026-06-17
+**3. [Midjourney 发布超声全身扫描仪，AI图像公司跨界医疗硬件](https://www.theverge.com/ai-artificial-intellig</description></item><item><title>AI 情报日报 · 2026-06-17</title><link>https://airadar1.web.app/reports/daily/2026-06-17/</link><guid isPermaLink="false">daily-2026-06-17</guid><pubDate>Wed, 17 Jun 2026 13:10:35 -0000</pubDate><description># AI 情报日报 · 2026-06-17
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日刷新版_
 
@@ -317,7 +317,7 @@ _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录 · 当日
 ⚡ 头部闭源厂商烧钱真相摆上台面——巨额亏损意味着**未来涨价、调整免费额度、收紧 API 条款**的压力，直接影响你的长期成本结构。
 👉 把「主力供应商涨价 30-50%」纳入成本敏感性测算；对高频调用链路预备「降级到更便宜模型/开源」的路径，别被未来提价打穿毛利。
 
-**2. [GLM-5.2 登顶 Artificial Analysis 开源权重模型榜](https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intel</description></item><item><title>AI 情报日报 · 2026-06-16</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-16/</link><guid isPermaLink="false">daily-2026-06-16</guid><pubDate>Mon, 15 Jun 2026 23:06:38 -0000</pubDate><description># AI 情报日报 · 2026-06-16
+**2. [GLM-5.2 登顶 Artificial Analysis 开源权重模型榜](https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intel</description></item><item><title>AI 情报日报 · 2026-06-16</title><link>https://airadar1.web.app/reports/daily/2026-06-16/</link><guid isPermaLink="false">daily-2026-06-16</guid><pubDate>Mon, 15 Jun 2026 23:06:38 -0000</pubDate><description># AI 情报日报 · 2026-06-16
 
 _☕ 正文 2 分钟读完 · PM 视角 · 深度解读见文末附录_
 
@@ -329,7 +329,7 @@ Anthropic 禁令反转发酵——TechCrunch 揭「禁令从来不是因为越�
 
 **1. [Anthropic 禁令反转：真相非越狱漏洞 + 安全界联名抗议](https://techcrunch.com/2026/06/15/the-us-governments-anthropic-models-ban-was-never-about-an-ai-jailbreak/)** `9/10` · TechCrunch×2 / The Verge / HN 193 · `Anthropic` `监管` `出口管制`
 ⚡ 昨天的禁令今天反转发酵——官方理由「越狱漏洞」被揭非真实原因，安全专家集体抗议禁令「危险」，[Mythos 5 之争](https://www.theverge.com/ai-artificial-intelligence/950412/anthropic-trump-adminstration-claude-mythos-fable-5-export-controls)直指出口管制政治博弈。监管不是一锤定音，会因行业反弹反复。
-👉 别因「已禁」就仓促弃用或锁</description></item><item><title>AI 情报日报 · 2026-06-15</title><link>https://songshishuang.github.io/ai-radar/reports/daily/2026-06-15/</link><guid isPermaLink="false">daily-2026-06-15</guid><pubDate>Sun, 14 Jun 2026 22:01:07 -0000</pubDate><description># AI 情报日报 · 2026-06-15
+👉 别因「已禁」就仓促弃用或锁</description></item><item><title>AI 情报日报 · 2026-06-15</title><link>https://airadar1.web.app/reports/daily/2026-06-15/</link><guid isPermaLink="false">daily-2026-06-15</guid><pubDate>Sun, 14 Jun 2026 22:01:07 -0000</pubDate><description># AI 情报日报 · 2026-06-15
 
 _☕ 正文 2 分钟读完 · 深度解读见文末附录_
 
